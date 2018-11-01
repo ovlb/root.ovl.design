@@ -1,5 +1,5 @@
 <template>
-  <main class="homepage">
+  <main class="homepage-content">
     <h1 class="title">
       <logo color="#f8f2e3" />
     </h1>
@@ -56,19 +56,18 @@ export default {
 <style lang="scss">
 @import '~assets/css/sass/import';
 
-.homepage {
+.homepage-content {
   max-width: 40rem;
   padding: 8vmin;
 
   // & >
-}
+  *:not(:last-child) {
+    margin-bottom: space(double, viewport);
+  }
 
-*:not(:last-child) {
-  margin-bottom: space(double, viewport);
-}
-
-.title {
-  margin-bottom: space(full, viewport);
+  .title {
+    margin-bottom: space(full, viewport);
+  }
 }
 
 .index-nav {
