@@ -1,0 +1,21 @@
+a {
+  color: color(main);
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: color(main-dark);
+  }
+
+  &:focus {
+    outline: 2px dotted color(main);
+  }
+
+  &.nuxt-link-active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
