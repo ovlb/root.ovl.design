@@ -27,8 +27,12 @@ export default {
       order: '-fields.date'
     })
 
-    store.commit('articles/total', total)
-    store.commit('articles/add', items)
+    const currentTotal = store.state.articles.count
+
+    if (currentTotal !== total) {
+      store.commit('articles/total', total)
+      store.commit('articles/add', items)
+    }
   }
 }
 </script>
