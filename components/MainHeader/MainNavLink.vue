@@ -34,6 +34,7 @@ export default {
 @import '~assets/css/sass/import';
 
 .main-nav__link {
+  backface-visibility: hidden;
   color: color(main);
   display: block;
   padding: space(half, relative) space(full, relative);
