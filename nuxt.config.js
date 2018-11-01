@@ -7,7 +7,9 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    titleTemplate: (chunk) => {
+      return chunk ? `${chunk} | ovl – code & design` : 'ovl – code & design'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
