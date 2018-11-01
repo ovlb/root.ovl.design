@@ -1,9 +1,9 @@
 <template>
-  <nuxt-link 
-    :to="{ path: `/${link}`}" 
-    :title="title" 
-    :exact="exact" 
-    class="main-nav__link" 
+  <nuxt-link
+    :to="{ path: `/${link}`}"
+    :title="title"
+    :exact="exact"
+    class="main-nav__link"
     active-class="main-nav__link--active">{{ text }}</nuxt-link>
 </template>
 
