@@ -1,13 +1,23 @@
 <template>
-  <main>Hi</main>
+  <the-content>
+    <h1 class="main-headline">Worte auf digitalem Papier</h1>
+    <text-list :items="list" />
+  </the-content>
 </template>
 
 <script>
+import TheContent from '~/components/global/TheContent.vue'
+import TextList from '~/components/text/TextList.vue'
+
 import contentfulClient from '~/plugins/contentful'
 import { mapState } from 'vuex'
 
 export default {
   layout: 'default',
+  components: {
+    TheContent,
+    TextList
+  },
   computed: {
     ...mapState('articles', ['count', 'list'])
   },
