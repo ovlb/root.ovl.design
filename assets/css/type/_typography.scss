@@ -14,15 +14,15 @@
   margin: space(full, relative) 0 space(half, relative);
 }
 
-.small-headline {
-  font-size: 1em;
+.small-headline,
+.article__body h3 {
   font-size: var(--type-base);
   font-weight: bold;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   line-height: 1.1;
   margin: space(full) 0 space(half) 0;
   text-transform: uppercase;
-  word-spacing: .1em;
+  word-spacing: 0.1em;
 
   & + p {
     margin-top: 0;
@@ -32,16 +32,27 @@
 p {
   font-size: 1em;
   font-size: var(--type-base);
-  line-height: 1.425;
+  line-height: 1.5;
   margin-bottom: space(half, relative);
-  text-indent: 1em;
 
-  .main-headline + &, .sub-headline + &, .small-headline + &, &:first-child {
+  &:not([class]) {
+    text-indent: 1em;
+  }
+
+  .main-headline + &,
+  .sub-headline + &,
+  .small-headline + &,
+  .article__body h3 + &,
+  &:first-child {
     text-indent: 0;
   }
 }
 
 .p-small {
-  font-size: .833em;
+  font-size: var(--type-small);
+}
+
+.type-is-aside {
+  color: color(text-light);
   font-size: var(--type-small);
 }
