@@ -1,3 +1,17 @@
 .content {
   padding: 4vmin;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 1fr minmax(calc(90vmin), 1fr) 1fr;
+    padding: space(double, viewport) 0;
+
+    & > * {
+      grid-column: 2 / span 1;
+    }
+
+    & > *.full-width {
+      grid-column: 1 / -1;
+    }
+  }
 }
