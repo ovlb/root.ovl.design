@@ -4,9 +4,13 @@
 
 <script>
 import contentfulClient from '~/plugins/contentful'
+import { mapState } from 'vuex'
 
 export default {
   layout: 'default',
+  computed: {
+    ...mapState('articles', ['count', 'list'])
+  },
   async fetch({ store, params }) {
     const { items, total } = await contentfulClient.getEntries({
       content_type: 'article',

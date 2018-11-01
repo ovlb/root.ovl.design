@@ -5,7 +5,7 @@ export const state = () => ({
 
 export const mutations = {
   add(state, data) {
-    state.list.push(...data)
+    state.list = data
   },
   total(state, data) {
     state.count = data
