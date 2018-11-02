@@ -1,5 +1,4 @@
 .main-headline {
-  font-size: 1.728em;
   font-size: var(--type-large);
   margin: space(double, relative) 0 space(half, relative);
 
@@ -9,18 +8,17 @@
 }
 
 .sub-headline {
-  font-size: 1.2em;
   font-size: var(--type-medium);
   margin: space(full, relative) 0 space(half, relative);
 }
 
 .small-headline,
-.article__body h3 {
+.text__body h3 {
   font-size: var(--type-base);
   font-weight: bold;
   letter-spacing: 0.1em;
   line-height: 1.1;
-  margin: space(full) 0 space(half) 0;
+  margin: space(double, relative) 0 space(half, relative) 0;
   text-transform: uppercase;
   word-spacing: 0.1em;
 
@@ -30,10 +28,9 @@
 }
 
 p {
-  font-size: 1em;
   font-size: var(--type-base);
-  line-height: 1.5;
-  margin-bottom: space(half, relative);
+  line-height: 1.55;
+  margin-bottom: 0.25 * space(half, relative);
 
   &:not([class]) {
     text-indent: 1em;
@@ -42,7 +39,7 @@ p {
   .main-headline + &,
   .sub-headline + &,
   .small-headline + &,
-  .article__body h3 + &,
+  .text__body h3 + &,
   &:first-child {
     text-indent: 0;
   }
