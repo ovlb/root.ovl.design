@@ -1,17 +1,33 @@
 <template>
-  <the-content>
-    <article class="text">
-      <header class="article__header">
-        <p class="type-is-aside">{{ post.fields.categories[0].fields.title }}—{{ post.fields.date | displayDate }}</p>
-        <h1 class="main-headline">{{ post.fields.title }}</h1>
+  <the-content class="content--no-padding">
+    <article class="text full-width">
+      <header class="text__header">
+        <p class="text__date">{{ post.fields.categories[0].fields.title }}—{{ post.fields.date | displayDate }}</p>
+        <h1 class="main-headline text__headline">{{ post.fields.title }}</h1>
+        <section
+          v-if="post.fields.contentIntro"
+          class="text__intro"
+          v-html="parsedText(post.fields.contentIntro)"
+        />
       </header>
+      <picture class="text__hero-image">
+        <source
+          :srcset="srcSet(post.fields.heroImage.fields.imageSmall.fields.file.url, 'small')"
+          media="(max-width: 1199px)"
+          sizes="(min-width: 777px) 33vw, 25vw"
+        >
+        <source
+          :srcset="srcSet(post.fields.heroImage.fields.imageLarge.fields.file.url, 'large')"
+          media="(min-width: 1200px)"
+          sizes="50vw"
+        >
+        <img
+          :src="post.fields.heroImage.fields.imageSmall.fields.file.url"
+          :alt="post.fields.heroImage.fields.altText"
+        >
+      </picture>
       <section
-        v-if="post.fields.intro"
-        class="article__intro"
-        v-html="parsedText(post.fields.intro)"
-      />
-      <section
-        class="article__body"
+        class="text__body"
         v-html="parsedText(post.fields.content)"
       />
     </article>
@@ -71,6 +87,76 @@ export default {
   methods: {
     parsedText(text) {
       return marked(text)
+    },
+    srcSet(url, size) {
+      const sizes = {
+        small: [
+          320,
+          360,
+          400,
+          480,
+          520,
+          560,
+          640,
+          680,
+          720,
+          760,
+          800,
+          880,
+          920,
+          960,
+          1000,
+          1040,
+          1080,
+          1120,
+          1160,
+          1220,
+          1260,
+          1300,
+          1340,
+          1380
+        ],
+        large: [
+          600,
+          680,
+          760,
+          840,
+          900,
+          960,
+          1020,
+          1080,
+          1140,
+          1200,
+          1260,
+          1320,
+          1380,
+          1420,
+          1480,
+          1520,
+          1600,
+          1700,
+          1800,
+          1900,
+          2000,
+          2100,
+          2200,
+          2300,
+          2400,
+          2600,
+          2800,
+          3000,
+          3200,
+          3400
+        ]
+      }
+
+      let set = ''
+
+      sizes[size].forEach((size) => {
+        set += `${url}?w=${size} ${size}w, `
+      })
+
+      return set
     }
   }
 }
@@ -79,34 +165,113 @@ export default {
 <style lang="scss">
 @import '~assets/css/sass/import';
 
-.article__header {
+$bp-text-one: 777px;
+
+.text {
+  display: grid;
+  grid-template-columns: [main-start content-start] 3fr [main-end aside-start] 1fr [aside-end content-end];
+  margin: 0 auto;
+  max-width: 1800px;
+
+  @media screen and (min-width: $bp-text-one) {
+    grid-template-columns: [main-start content-start] 2fr [main-end content-end aside-start] 1fr [aside-end];
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: [main-start content-start] 1fr [main-end content-end aside-start] 1fr [aside-end];
+  }
+
+  @supports (display: grid) {
+    & > * {
+      margin: 0 !important;
+    }
+  }
+}
+
+.text__header {
+  color: color(main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-bottom: space(full, relative);
-  padding: 1.6rem 0.8rem;
-  text-align: center;
+  padding: 1.6rem space(full, relative);
   -webkit-transition: opacity 0.1s cubic-bezier(0, 0.1, 0.3, 1);
   transition: opacity 0.1s cubic-bezier(0, 0.1, 0.3, 1);
+  grid-column: main;
 }
 
-.article__intro {
-  padding: space(full, viewport) space(double, viewport);
+.text__date {
+  font-size: var(--type-small);
 }
 
-.article__body {
+.text__headline {
+  margin-top: space(full, relative);
+}
+
+.text__hero-image {
+  background-color: color(main);
+  background-image: linear-gradient(
+    to bottom left,
+    color(main-dark),
+    color(main-light)
+  );
+  grid-column: aside;
+  align-self: stretch;
+  position: sticky;
+  top: 5.5rem;
+  height: calc(100vh - 5.5rem);
+  width: 100%;
+
+  & > img {
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    width: 100%;
+  }
+
+  @media (min-width: 642px) {
+    height: calc(100vh - (8vmin + 4.3rem));
+    top: calc(8vmin + 4.3rem);
+  }
+
+  @media screen and (min-width: $bp-text-one) {
+  }
+}
+
+.text__body {
+  background-color: color(light);
+  grid-column: content;
+  padding: space(full, viewport);
+  /* Used to push body over sticky image */
+  z-index: 1;
+
+  & > p,
+  & > h3 {
+    max-width: 66ch;
+  }
+
   & > h3 {
     position: relative;
 
     &::before {
-      background-color: #b00000;
+      background-color: color(main);
       content: '';
       height: 2px;
-      right: calc(100% + 0.25em);
+      right: calc(100% + 0.1em);
       position: absolute;
-      top: 0;
-      -webkit-transform: rotate(22.5deg);
-      transform: rotate(22.5deg);
+      top: 0.3rem;
+      transform: rotate(45deg);
       width: 24px;
       z-index: -1;
     }
+  }
+
+  & blockquote {
+    border-left: 2px solid color(text-light);
+    margin: space(full, relative) 0 space(double, relative);
+    max-width: 55ch;
+    line-height: 1.4;
+    padding: space(full, relative) 0 space(full, relative) space(full, viewport);
   }
 }
 </style>
