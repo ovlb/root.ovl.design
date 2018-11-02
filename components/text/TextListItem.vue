@@ -1,20 +1,32 @@
 <template>
   <li
+    :class="{ 'article-card--external': !infos.fields.isInternal }"
     class="article-card"
   >
     <aside class="article-card__aside">
       <p class="article-card__info">{{ infos.fields.date | displayDate }}</p>
     </aside>
-    <h2 class="sub-headline article-card__headline">{{ infos.fields.title }}</h2>
+    <h2
+      :class="{ 'article-card__headline--external': !infos.fields.isInternal }"
+      class="sub-headline article-card__headline"
+    >{{ infos.fields.title }}</h2>
     <div class="article-card__text">
-      <p class="article-card__teaser"> {{ infos.fields.intro }}</p>
+      <p class="article-card__teaser">{{ infos.fields.intro }}</p>
+
       <a
         :href="linkTarget"
         :aria-label="`Text ${infos.fields.title} lesen`"
+        :class="{ 'article-card__link--external': !infos.fields.isInternal }"
         class="article-card__link"
       >
         <span aria-hidden="true">»</span> Text lesen
       </a>
+      <p
+        v-if="!infos.fields.isInternal"
+        class="type-is-aside"
+        style="margin-left: auto"
+        aria-hidden="true"
+      >{{ infos.fields.externalPost.fields.medium }}</p>
     </div>
 
   </li>
@@ -51,7 +63,20 @@ export default {
 @import '~assets/css/sass/import';
 
 .article-card {
+  background-image: /* linear-gradient(
+      to right,
+      color(main-light),
+      color(main-dark)
+    ), */ url('~assets/img/icons/floral-heart-dark-red.svg')
+    /* ,
+    linear-gradient(to right, color(main-dark), color(main-light)) */;
+  background-position: /* left calc(100% - 2rem),  */ center
+    calc(100% - 0.66rem) /* ,
+    right calc(100% - 2rem) */;
+  background-repeat: no-repeat;
+  background-size: 1rem;
   list-style: none;
+  padding-bottom: space(double, relative);
   padding-left: space(full, viewport);
   overflow: hidden;
   position: relative;
@@ -92,6 +117,19 @@ export default {
       transform-origin: left bottom;
       width: calc(100% + 2vmin + 4px);
       will-change: transform;
+    }
+  }
+
+  &--external {
+    &::after {
+      background-image: url('~assets/img/icons/baseline-launch-24px-light.svg');
+      background-size: contain;
+      content: '';
+      display: inline-block;
+      height: 1em;
+      margin-left: 0.25em;
+      transform: translateY(0.125em);
+      width: 1em;
     }
   }
 }

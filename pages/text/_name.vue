@@ -189,6 +189,17 @@ $bp-text-one: 777px;
 }
 
 .text__header {
+  background-image: linear-gradient(
+      to right,
+      color(main-light),
+      color(main-dark)
+    ),
+    url('~assets/img/icons/floral-heart-dark-red.svg'),
+    linear-gradient(to right, color(main-dark), color(main-light));
+  background-position: 4vmin calc(100% - 2rem), center calc(100% - 1.66rem),
+    calc(100% - 4vmin) calc(100% - 2rem);
+  background-repeat: no-repeat;
+  background-size: 40% 0.125rem, 1rem, 40% 0.125rem;
   color: color(main);
   display: flex;
   flex-direction: column;
@@ -206,6 +217,17 @@ $bp-text-one: 777px;
 }
 
 .text__headline {
+  // background-image: linear-gradient(
+  //     to right,
+  //     color(main-light),
+  //     color(main-dark)
+  //   ),
+  //   url('~/assets/img/icons/floral-heart-dark-red.svg'),
+  //   linear-gradient(to right, color(main-dark), color(main-light));
+  // background-position: left calc(100% - 1rem), center calc(100% - 0.66rem),
+  //   right calc(100% - 1rem);
+  // background-clip: text;
+  // -webkit-text-fill-color: transparent;
   margin-top: space(full, relative);
 }
 
