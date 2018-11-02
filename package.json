@@ -1,7 +1,7 @@
 {
-  "name": "test",
+  "name": "ovl.design",
   "version": "1.0.0",
-  "description": "My laudable Nuxt.js project",
+  "description": "My website",
   "author": "Oscar",
   "private": true,
   "scripts": {
