@@ -40,7 +40,7 @@ export default {
       const { isInternal, slug } = this.infos.fields
 
       return isInternal
-        ? `/texte/${slug}`
+        ? `/text/${slug}`
         : this.infos.fields.externalPost.fields.link
     }
   }
