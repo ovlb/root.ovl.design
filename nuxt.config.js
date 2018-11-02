@@ -1,4 +1,5 @@
 const pkg = require('./package')
+import contentfulClient from './plugins/contentful'
 
 module.exports = {
   mode: 'universal',
@@ -59,6 +60,21 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+  generate: {
+    async routes() {
+      const { items } = await contentfulClient.getEntries({
+        content_type: 'article',
+        order: '-fields.date'
+      })
+
+      return items.filter((item) => item.fields.isInternal).map((item) => {
+        return {
+          route: `/texte/${item.fields.slug}`,
+          payload: item
+        }
+      })
     }
   }
 }
