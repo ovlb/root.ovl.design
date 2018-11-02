@@ -5,7 +5,7 @@
     </h1>
     <nav class="index-nav">
       <nuxt-link
-        to="/texte"
+        to="/text"
         class="index-nav-link"
       >Texte</nuxt-link>
     </nav>

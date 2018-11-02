@@ -194,7 +194,7 @@ $bp-text-one: 777px;
   flex-direction: column;
   justify-content: center;
   margin-bottom: space(full, relative);
-  padding: 1.6rem space(full, relative);
+  padding: 1.6rem space(double, viewport);
   -webkit-transition: opacity 0.1s cubic-bezier(0, 0.1, 0.3, 1);
   transition: opacity 0.1s cubic-bezier(0, 0.1, 0.3, 1);
   grid-column: main;
@@ -247,7 +247,7 @@ $bp-text-one: 777px;
 .text__body {
   background-color: color(light);
   grid-column: content;
-  padding: space(full, viewport);
+  padding: space(double, viewport);
   /* Used to push body over sticky image */
   z-index: 1;
 

@@ -71,7 +71,7 @@ module.exports = {
 
       return items.filter((item) => item.fields.isInternal).map((item) => {
         return {
-          route: `/texte/${item.fields.slug}`,
+          route: `/text/${item.fields.slug}`,
           payload: item
         }
       })

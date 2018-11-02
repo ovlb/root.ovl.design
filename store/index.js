@@ -15,7 +15,7 @@ export const state = () => ({
     },
     {
       id: 3,
-      slug: 'texte',
+      slug: 'text',
       title: 'Zum Archiv meiner Texte',
       text: 'Texte'
     }
