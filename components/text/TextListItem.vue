@@ -88,7 +88,7 @@ export default {
       mix-blend-mode: multiply;
       height: space(half, viewport);
       transition: transform 0.2s cubic-bezier(0, 0.1, 0.3, 1);
-      transform: rotate(45deg) translate(-48%, -189%) scale(0.5, 0.75);
+      transform: rotate(45deg) translate(-49%, -150%) scale(0.5, 0.5);
       transform-origin: left bottom;
       width: calc(100% + 2vmin + 4px);
       will-change: transform;
