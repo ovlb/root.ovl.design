@@ -19,7 +19,7 @@
         <source
           :srcset="srcSet(post.fields.heroImage.fields.imageLarge.fields.file.url, 'large')"
           media="(min-width: 1200px)"
-          sizes="50vw"
+          sizes="(min-width: 1800px) 900px, 50vw"
         >
         <img
           :src="post.fields.heroImage.fields.imageSmall.fields.file.url"
