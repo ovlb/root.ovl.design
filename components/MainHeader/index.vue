@@ -66,6 +66,7 @@ export default {
   margin-bottom: space(full, viewport);
   margin-top: space(double, viewport);
   max-width: 12rem;
+  text-align: center;
   width: 50%;
 }
 </style>

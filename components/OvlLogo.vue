@@ -30,7 +30,7 @@ export default {
 @import '~assets/css/sass/import';
 
 .ovl-logo {
-  display: block;
+  display: inline-block;
   fill: #f8f2e3;
   max-width: 18rem;
   width: 75%;
