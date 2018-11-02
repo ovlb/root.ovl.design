@@ -201,11 +201,17 @@ $bp-text-one: 777px;
 }
 
 .text__date {
+  color: color(dark);
   font-size: var(--type-small);
 }
 
 .text__headline {
   margin-top: space(full, relative);
+}
+
+.text__intro {
+  color: color(dark);
+  font-size: var(--type-medium);
 }
 
 .text__hero-image {
