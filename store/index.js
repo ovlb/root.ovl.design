@@ -1,7 +1,7 @@
 export const state = () => ({
   siteName: 'ovl',
   mainNavLinks: [
-    {
+    /* {
       id: 2,
       slug: 'oscar',
       title: 'Über mich',
@@ -12,7 +12,7 @@ export const state = () => ({
       slug: 'arbeiten',
       title: 'Übersicht meiner Arbeiten',
       text: 'Arbeiten'
-    },
+    }, */
     {
       id: 3,
       slug: 'text',
