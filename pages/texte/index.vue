@@ -13,6 +13,18 @@ import contentfulClient from '~/plugins/contentful'
 import { mapState } from 'vuex'
 
 export default {
+  head() {
+    return {
+      title: 'Texte',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Worte auf digitalem Papier.'
+        }
+      ]
+    }
+  },
   layout: 'default',
   components: {
     TheContent,
