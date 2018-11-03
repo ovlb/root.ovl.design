@@ -63,16 +63,8 @@ export default {
 @import '~assets/css/sass/import';
 
 .article-card {
-  background-image: /* linear-gradient(
-      to right,
-      color(main-light),
-      color(main-dark)
-    ), */ url('~assets/img/icons/floral-heart-dark-red.svg')
-    /* ,
-    linear-gradient(to right, color(main-dark), color(main-light)) */;
-  background-position: /* left calc(100% - 2rem),  */ center
-    calc(100% - 0.66rem) /* ,
-    right calc(100% - 2rem) */;
+  background-image: url('~assets/img/icons/floral-heart-dark-red.svg');
+  background-position: center calc(100% - 0.66rem);
   background-repeat: no-repeat;
   background-size: 1rem;
   list-style: none;

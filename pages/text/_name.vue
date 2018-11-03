@@ -217,17 +217,6 @@ $bp-text-one: 777px;
 }
 
 .text__headline {
-  // background-image: linear-gradient(
-  //     to right,
-  //     color(main-light),
-  //     color(main-dark)
-  //   ),
-  //   url('~/assets/img/icons/floral-heart-dark-red.svg'),
-  //   linear-gradient(to right, color(main-dark), color(main-light));
-  // background-position: left calc(100% - 1rem), center calc(100% - 0.66rem),
-  //   right calc(100% - 1rem);
-  // background-clip: text;
-  // -webkit-text-fill-color: transparent;
   margin-top: space(full, relative);
 }
 

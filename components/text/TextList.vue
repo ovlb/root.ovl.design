@@ -30,7 +30,6 @@ export default {
 .article-list {
   display: grid;
   grid-gap: space(double, viewport);
-  // grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   margin-left: -(space(full, viewport));
   padding: 0;
 }

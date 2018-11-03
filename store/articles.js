@@ -11,8 +11,3 @@ export const mutations = {
     state.count = data
   }
 }
-
-/* export const actions = () => {
-  get()
-}
- */
