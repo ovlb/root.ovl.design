@@ -243,6 +243,7 @@ $bp-text-one: 777px;
     color(main-dark),
     color(main-light)
   );
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 6vmin 100%);
   grid-column: aside;
   align-self: stretch;
   position: sticky;
