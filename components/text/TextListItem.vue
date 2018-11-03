@@ -126,10 +126,10 @@ export default {
       background-size: contain;
       content: '';
       display: inline-block;
-      height: 1em;
+      height: 0.8em;
       margin-left: 0.25em;
-      transform: translateY(0.125em);
-      width: 1em;
+      transform: translateY(0.1em);
+      width: 0.8em;
     }
   }
 }
