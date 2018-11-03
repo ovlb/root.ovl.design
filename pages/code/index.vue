@@ -77,12 +77,13 @@ export default {
   /* methods: {
   }, */
   async fetch({ store, params }) {
+    console.log('fetuching')
     const { items, total } = await contentfulClient.getEntries({
       content_type: 'code',
       order: '-fields.publishingDate'
     })
 
-    const currentTotal = store.state.articles.count
+    const currentTotal = store.state.code.count
 
     if (currentTotal !== total) {
       store.commit('code/total', total)
