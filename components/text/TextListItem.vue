@@ -68,9 +68,10 @@ export default {
   background-repeat: no-repeat;
   background-size: 1rem;
   list-style: none;
+  margin-left: -(space(full, viewport));
+  overflow: hidden;
   padding-bottom: space(double, relative);
   padding-left: space(full, viewport);
-  overflow: hidden;
   position: relative;
 
   &:hover {

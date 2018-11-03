@@ -6,13 +6,13 @@ export const state = () => ({
       slug: 'oscar',
       title: 'Über mich',
       text: 'Ich bin'
-    },
+    },*/
     {
       id: 22341341323421,
-      slug: 'arbeiten',
-      title: 'Übersicht meiner Arbeiten',
-      text: 'Arbeiten'
-    }, */
+      slug: 'code',
+      title: 'Code I wrote',
+      text: 'Code'
+    },
     {
       id: 3,
       slug: 'text',

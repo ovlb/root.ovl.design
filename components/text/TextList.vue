@@ -26,11 +26,4 @@ export default {
 
 <style lang="scss">
 @import '~assets/css/sass/import';
-
-.article-list {
-  display: grid;
-  grid-gap: space(double, viewport);
-  margin-left: -(space(full, viewport));
-  padding: 0;
-}
 </style>
