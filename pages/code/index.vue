@@ -3,7 +3,7 @@
     <p class="code-date">{{ dateString }}</p>
     <h1 class="u-is-visually-hidden">Code</h1>
     <terminal-row
-      command="ls"
+      command="show-projects --verbose --directories"
       class="code-headline"
       aria-hidden="true"
     >
