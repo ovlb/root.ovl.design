@@ -24,12 +24,14 @@
           <li class="icon-list__item">
             <a
               :href="infos.fields.website"
+              :aria-label="`${infos.fields.title} Website`"
               class="icon-list__link icon-list__link--website"
             />
           </li>
           <li class="icon-list__item">
             <a
               :href="infos.fields.sourceCode"
+              :aria-label="`${infos.fields.title} Source Code`"
               class="icon-list__link icon-list__link--code"
             />
           </li>
