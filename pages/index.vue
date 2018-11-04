@@ -88,7 +88,10 @@ export default {
   letter-spacing: 0.1em;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: space(full, relative);
+
+  & + & {
+    margin-left: space(full, relative);
+  }
 
   &:hover,
   &:focus {
