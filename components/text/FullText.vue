@@ -32,6 +32,18 @@
       >
     </picture>
     <section
+      v-if="Array.isArray(infos.content)"
+      class="text__body"
+    >
+      <div
+        v-for="item in infos.content"
+        :key="item.sys.id">
+        <h2 class="sub-headline">{{ item.fields.title }}</h2>
+        <div v-html="parsedText(item.fields.body)" />
+      </div>
+    </section>
+    <section
+      v-else
       class="text__body"
       v-html="parsedText(infos.content)"
     />
@@ -178,7 +190,7 @@ $bp-text-one: 777px;
   flex-direction: column;
   justify-content: center;
   margin-bottom: space(full, relative);
-  padding: 1.6rem space(double, viewport);
+  padding: 1.6rem space(double, viewport) space(triple, relative);
   -webkit-transition: opacity 0.1s cubic-bezier(0, 0.1, 0.3, 1);
   transition: opacity 0.1s cubic-bezier(0, 0.1, 0.3, 1);
   grid-column: main;
