@@ -3,19 +3,19 @@
     <article>
       <terminal-row
         :path="infos.fields.slug"
-        :command="'echo $P_NAME'"
+        :command="'echo $NAME'"
       >
         <h2 class="terminal-row__output">{{ infos.fields.title }}</h2>
       </terminal-row>
       <terminal-row
         :path="infos.fields.slug"
-        :command="'echo $P_DESC'"
+        :command="'echo $DESC'"
       >
         <p class="terminal-row__output">{{ infos.fields.description }}</p>
       </terminal-row>
       <terminal-row
         :path="infos.fields.slug"
-        :command="'echo $P_LINKS'"
+        :command="'echo $LINKS'"
       >
         <ul
           class="icon-list code-card__icons"
