@@ -90,14 +90,30 @@ export default {
   },
   generate: {
     async routes() {
-      const { items } = await contentfulClient.getEntries({
+      const articles = await contentfulClient.getEntries({
         content_type: 'article',
         order: '-fields.date'
       })
 
-      return items.filter((item) => item.fields.isInternal).map((item) => {
+      const pages = await contentfulClient.getEntries({
+        content_type: 'page'
+      })
+
+      const items = [
+        ...pages.items,
+        ...articles.items.filter((item) => item.fields.isInternal)
+      ]
+
+      const pathMap = {
+        article: '/text/',
+        page: '/'
+      }
+
+      return items.map((item) => {
+        const type = item.sys.contentType.sys.id
+
         return {
-          route: `/text/${item.fields.slug}`,
+          route: `${pathMap[type]}${item.fields.slug}`,
           payload: item
         }
       })

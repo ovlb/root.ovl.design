@@ -87,7 +87,6 @@ export default {
   /* methods: {
   }, */
   async fetch({ store, params }) {
-    console.log('fetuching')
     const { items, total } = await contentfulClient.getEntries({
       content_type: 'code',
       order: '-fields.publishingDate'

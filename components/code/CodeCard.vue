@@ -112,6 +112,7 @@ export default {
   border-radius: 0.25em;
   display: block;
   color: color(dark);
+  font-size: var(--type-small);
   top: calc(100% + 0.25em);
   left: -0.25em;
   line-height: 1;
@@ -124,7 +125,8 @@ export default {
   white-space: nowrap;
 
   .icon-list__link:hover > &,
-  .icon-list__link:focus > & {
+  .icon-list__link:focus > &,
+  .icon-list__link:active > & {
     opacity: 1;
     transform: none;
   }

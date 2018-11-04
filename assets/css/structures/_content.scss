@@ -3,6 +3,7 @@
 
   @supports (display: grid) {
     display: grid;
+    flex-grow: 1;
     grid-template-columns: 1fr minmax(calc(90vmin), 1fr) 1fr;
     padding: space(double, viewport) 0;
 
@@ -12,6 +13,7 @@
 
     & > *.full-width {
       grid-column: 1 / -1;
+      width: 100%;
     }
   }
 

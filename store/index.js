@@ -19,11 +19,12 @@ export const state = () => ({
       title: 'Zum Archiv meiner Texte',
       text: 'Texte'
     }
-    /* {
-      id: 4,
-      slug: 'kontakt',
-      title: 'Kontakt',
-      text: 'Kontakt'
-    } */
+  ],
+  footerNavLinks: [
+    {
+      id: 1323,
+      slug: 'impressum',
+      text: 'Impressum'
+    }
   ]
 })
