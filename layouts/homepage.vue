@@ -25,5 +25,10 @@
       outline: 2px dotted color(light);
     }
   }
+
+  ::selection {
+    background-color: color(light);
+    color: color(main);
+  }
 }
 </style>
