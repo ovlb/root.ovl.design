@@ -63,14 +63,6 @@ export default {
       ]
     }
   },
-  filters: {
-    parsed: (value) => marked(value),
-    displayDate: (value) => {
-      const d = new Date(value)
-
-      return d.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })
-    }
-  },
   components: {
     TheContent,
     FullText
@@ -93,81 +85,6 @@ export default {
     }
 
     return { post }
-  },
-  methods: {
-    parsedText(text) {
-      return marked(text)
-    },
-    srcSet(url, size) {
-      const sizes = {
-        small: [
-          320,
-          360,
-          400,
-          480,
-          520,
-          560,
-          640,
-          680,
-          720,
-          760,
-          800,
-          880,
-          920,
-          960,
-          1000,
-          1040,
-          1080,
-          1120,
-          1160,
-          1220,
-          1260,
-          1300,
-          1340,
-          1380
-        ],
-        large: [
-          600,
-          680,
-          760,
-          840,
-          900,
-          960,
-          1020,
-          1080,
-          1140,
-          1200,
-          1260,
-          1320,
-          1380,
-          1420,
-          1480,
-          1520,
-          1600,
-          1700,
-          1800,
-          1900,
-          2000,
-          2100,
-          2200,
-          2300,
-          2400,
-          2600,
-          2800,
-          3000,
-          3200,
-          3400
-        ]
-      }
-
-      let set = ''
-
-      sizes[size].forEach((size) => {
-        set += `${url}?w=${size} ${size}w, `
-      })
-
-      return set
-    }
   }
 }
 </script>
