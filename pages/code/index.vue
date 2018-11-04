@@ -110,7 +110,7 @@ export default {
 }
 
 .code-headline {
-  margin-bottom: space(full, viewport);
+  margin-bottom: space(double, viewport);
 }
 
 /* .ls-output {
