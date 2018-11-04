@@ -101,8 +101,6 @@ export default {
 @import '~assets/css/sass/import';
 
 .content--code {
-  --clr-accent: #28caf0;
-  --clr-red: #f76050;
 }
 
 .code-date {

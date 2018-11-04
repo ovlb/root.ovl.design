@@ -24,9 +24,16 @@
   }
 
   &--dark {
+    --clr-accent: #28caf0;
+    --clr-red: #f76050;
+
     font-family: monospace;
-    font-size: 1.1em;
+    font-size: 1.2em;
     background-color: color(dark);
     color: color(light);
+
+    ::selection {
+      background-color: var(--clr-accent);
+    }
   }
 }
