@@ -25,5 +25,17 @@ export const state = () => ({
       title: 'Kontakt',
       text: 'Kontakt'
     } */
+  ],
+  footerNavLinks: [
+    {
+      id: 12122,
+      slug: 'kontakt',
+      text: 'Kontakt'
+    },
+    {
+      id: 1323,
+      slug: 'impressum',
+      text: 'Impressum'
+    }
   ]
 })
