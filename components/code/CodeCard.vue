@@ -75,8 +75,8 @@ export default {
 
 .icon-list {
   display: grid;
-  grid-gap: 0.5em;
-  grid-template-columns: repeat(auto-fit, 2em);
+  grid-gap: 0.75em;
+  grid-template-columns: repeat(auto-fit, 1.75em);
   grid-auto-rows: 2em;
 }
 
@@ -85,9 +85,9 @@ export default {
 }
 
 .icon-list__link {
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
-  background-size: 75%;
+  background-size: contain;
   display: block;
   height: 100%;
 
