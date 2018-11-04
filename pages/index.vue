@@ -44,6 +44,11 @@ import Logo from '~/components/OvlLogo.vue'
 import { mapState } from 'vuex'
 
 export default {
+  head() {
+    return {
+      title: 'Homepage'
+    }
+  },
   layout: 'homepage',
   components: {
     Logo
