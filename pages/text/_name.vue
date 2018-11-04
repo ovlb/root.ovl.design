@@ -73,7 +73,9 @@ export default {
 
     let post
 
-    if (articles && articles.length) {
+    if (payload) {
+      post = payload
+    } else if (articles && articles.length) {
       post = articles.find((a) => a.fields.slug === name)
     } else {
       const { items } = await contentfulClient.getEntries({
