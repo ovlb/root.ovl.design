@@ -24,16 +24,22 @@
           <li class="icon-list__item">
             <a
               :href="infos.fields.website"
-              :title="`${infos.fields.title} Website`"
               class="icon-list__link icon-list__link--website"
-            />
+              rel="noopener"
+            >
+              <span class="u-is-visually-hidden">{{ infos.fields.title }}</span>
+              <span class="icon-list__link-text">Website</span>
+            </a>
           </li>
           <li class="icon-list__item">
             <a
               :href="infos.fields.sourceCode"
-              :title="`${infos.fields.title} Source Code`"
               class="icon-list__link icon-list__link--code"
-            />
+              rel="noopener"
+            >
+              <span class="u-is-visually-hidden">{{ infos.fields.title }}</span>
+              <span class="icon-list__link-text">Source Code</span>
+            </a>
           </li>
         </ul>
       </terminal-row>
@@ -90,6 +96,7 @@ export default {
   background-size: contain;
   display: block;
   height: 100%;
+  position: relative;
 
   &--website {
     background-image: url('~assets/img/icons/open-site-light.svg');
@@ -97,6 +104,29 @@ export default {
 
   &--code {
     background-image: url('~assets/img/icons/code-light.svg');
+  }
+}
+
+.icon-list__link-text {
+  background-color: color(light);
+  border-radius: 0.25em;
+  display: block;
+  color: color(dark);
+  top: calc(100% + 0.25em);
+  left: -0.25em;
+  line-height: 1;
+  opacity: 0;
+  padding: 0.25em;
+  position: absolute;
+  transition: all 0.3s ease-out;
+  transform: translateY(-0.25em);
+  width: auto;
+  white-space: nowrap;
+
+  .icon-list__link:hover > &,
+  .icon-list__link:focus > & {
+    opacity: 1;
+    transform: none;
   }
 }
 </style>
