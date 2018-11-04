@@ -5,9 +5,11 @@
     </h1>
     <nav class="index-nav">
       <nuxt-link
-        to="/text"
+        v-for="link in nav"
+        :key="link.id"
+        :to="`/${link.slug}`"
         class="index-nav-link"
-      >Texte</nuxt-link>
+      >{{ link.text }}</nuxt-link>
     </nav>
     <p
       class="c-main-content__p"
@@ -39,6 +41,8 @@
 <script>
 import Logo from '~/components/OvlLogo.vue'
 
+import { mapState } from 'vuex'
+
 export default {
   layout: 'homepage',
   components: {
@@ -49,6 +53,11 @@ export default {
       introText:
         'I am Oscar. I design for web and print. I care about accessibility, usability &amp; performance. I am typophile. I like to think. And owls. If you want to get in touch, <a href="mailto:o@ovl.design" title="Oscar’s E-mail">drop me a line</a> (<a href="res/pgpkey-o-at-ovl-design.asc" title="PGP Key for o@ovl.design">PGP Key</a>).'
     }
+  },
+  computed: {
+    ...mapState({
+      nav: 'mainNavLinks'
+    })
   }
 }
 </script>
@@ -61,7 +70,7 @@ export default {
   padding: 8vmin;
 
   // & >
-  *:not(:last-child) {
+  & > *:not(:last-child) {
     margin-bottom: space(double, viewport);
   }
 
