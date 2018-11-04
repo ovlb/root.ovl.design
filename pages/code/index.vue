@@ -48,7 +48,7 @@ export default {
           hid: 'ogImage',
           property: 'og:image',
           content:
-            'https://images.ctfassets.net/0qq78o7muy2j/41AVLQd3q0oEaQKwcW0Ck2/1adc1e0fc0c7525b4f25b45570847396/ovl-og-image-code.png'
+            'https://images.ctfassets.net/0qq78o7muy2j/3NP42JzNjWo0qKMk62kmqk/edf552a83b8cbe3c1e1375f37a1712dc/ovl-og-image-code.png'
         }
       ]
     }
