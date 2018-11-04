@@ -13,7 +13,7 @@
       <nuxt-link
         v-for="item in navItems"
         :key="item.id"
-        :to="item.slug"
+        :to="`/${item.slug}`"
         class="footer-nav__link"
         active-class="footer-nav__link--active"
       >{{ item.text }}</nuxt-link>
