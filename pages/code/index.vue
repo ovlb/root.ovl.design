@@ -43,6 +43,12 @@ export default {
           name: 'description',
           content:
             '01000011 01101111 01100100 01100101 00100000 01001001 00100000 01101000 01100001 01110110 01100101 00100000 01110111 01110010 01101001 01110100 01110100 01100101 01101110'
+        },
+        {
+          hid: 'ogImage',
+          property: 'og:image',
+          content:
+            'https://images.ctfassets.net/0qq78o7muy2j/41AVLQd3q0oEaQKwcW0Ck2/1adc1e0fc0c7525b4f25b45570847396/ovl-og-image-code.png'
         }
       ]
     }

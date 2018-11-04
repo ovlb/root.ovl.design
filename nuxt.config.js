@@ -1,7 +1,7 @@
 const pkg = require('./package')
 import contentfulClient from './plugins/contentful'
 
-module.exports = {
+export default {
   mode: 'universal',
 
   /*
@@ -14,7 +14,33 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Hi, I am Oscar. I write code and design for web and print. This is my website.'
+      },
+      {
+        hid: 'ogName',
+        property: 'og:site_name',
+        content: 'www.ovl.design'
+      },
+      {
+        hid: 'ogImage',
+        property: 'og:image',
+        content:
+          'https://images.ctfassets.net/0qq78o7muy2j/41AVLQd3q0oEaQKwcW0Ck2/1adc1e0fc0c7525b4f25b45570847396/ovl-og-image-generic.png'
+      },
+      {
+        hid: 'ogImageWidth',
+        property: 'og:image:width',
+        content: '2240'
+      },
+      {
+        hid: 'ogImageHeight',
+        property: 'og:image:height',
+        content: '1260'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
   },

@@ -43,6 +43,7 @@ import contentfulClient from '~/plugins/contentful'
 
 export default {
   head() {
+    const og = this.post.fields.openGraphImage.fields.file
     return {
       title: `${this.post.fields.title} « Texte`,
       meta: [
@@ -50,6 +51,36 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.post.fields.intro
+        },
+        {
+          hid: 'ogType',
+          property: 'og:type',
+          content: 'article'
+        },
+        {
+          hid: 'ogType',
+          property: 'og:type',
+          content: 'article'
+        },
+        {
+          hid: 'ogAuthir',
+          property: 'article:author',
+          content: 'https://www.facebook.com/oscar.braunert'
+        },
+        {
+          hid: 'ogImage',
+          property: 'og:image',
+          content: og.url
+        },
+        {
+          hid: 'ogImageWidth',
+          property: 'og:image:width',
+          content: og.details.image.width
+        },
+        {
+          hid: 'ogImageHeight',
+          property: 'og:image:height',
+          content: og.details.image.height
         }
       ]
     }
