@@ -4,14 +4,20 @@
     class="article-card"
   >
     <aside class="article-card__aside">
-      <p class="article-card__info">{{ infos.fields.date | displayDate }}</p>
+      <p class="article-card__info">
+        {{ infos.fields.date | displayDate }}
+      </p>
     </aside>
     <h2
       :class="{ 'article-card__headline--external': !infos.fields.isInternal }"
       class="sub-headline article-card__headline"
-    >{{ infos.fields.title }}</h2>
+    >
+      {{ infos.fields.title }}
+    </h2>
     <div class="article-card__text">
-      <p class="article-card__teaser">{{ infos.fields.intro }}</p>
+      <p class="article-card__teaser">
+        {{ infos.fields.intro }}
+      </p>
 
       <a
         :href="linkTarget"
@@ -19,16 +25,19 @@
         :class="{ 'article-card__link--external': !infos.fields.isInternal }"
         class="article-card__link"
       >
-        <span aria-hidden="true">»</span> Text lesen
+        <span aria-hidden="true">
+          »
+        </span> Text lesen
       </a>
       <p
         v-if="!infos.fields.isInternal"
         class="type-is-aside"
         style="margin-left: auto"
         aria-hidden="true"
-      >{{ infos.fields.externalPost.fields.medium }}</p>
+      >
+        {{ infos.fields.externalPost.fields.medium }}
+      </p>
     </div>
-
   </li>
 </template>
 

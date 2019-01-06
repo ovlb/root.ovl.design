@@ -6,7 +6,7 @@ export const state = () => ({
       slug: 'oscar',
       title: 'Über mich',
       text: 'Ich bin'
-    },*/
+    }, */
     {
       id: 22341341323421,
       slug: 'code',

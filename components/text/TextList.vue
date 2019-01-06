@@ -3,7 +3,8 @@
     <text-list-item
       v-for="article in items"
       :key="article.sys.id"
-      :infos="article" />
+      :infos="article"
+    />
   </ul>
 </template>
 
@@ -22,7 +23,6 @@ export default {
   }
 }
 </script>
-
 
 <style lang="scss">
 @import '~assets/css/sass/import';

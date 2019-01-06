@@ -4,9 +4,14 @@
     aria-label="Main Footer"
   >
     <section>
-      <h3 class="sub-headline u-is-visually-hidden">Hello</h3>
+      <h3 class="sub-headline u-is-visually-hidden">
+        Hello
+      </h3>
       <p>
-        Ich bin Oscar. Ich schreibe <a href="/code">Code</a>. Ich gestalte fürs Web und Print. Ich mag Eulen. Und das ist meine Website.
+        Ich bin Oscar. Ich schreibe <a href="/code">
+          Code
+        </a>. Ich gestalte
+        fürs Web und Print. Ich mag Eulen. Und das ist meine Website.
       </p>
     </section>
     <nav class="footer-nav">
@@ -16,7 +21,9 @@
         :to="`/${item.slug}`"
         class="footer-nav__link"
         active-class="footer-nav__link--active"
-      >{{ item.text }}</nuxt-link>
+      >
+        {{ item.text }}
+      </nuxt-link>
     </nav>
   </footer>
 </template>

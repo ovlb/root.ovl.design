@@ -5,13 +5,17 @@
         :path="infos.fields.slug"
         :command="'echo $NAME'"
       >
-        <h2 class="terminal-row__output">{{ infos.fields.title }}</h2>
+        <h2 class="terminal-row__output">
+          {{ infos.fields.title }}
+        </h2>
       </terminal-row>
       <terminal-row
         :path="infos.fields.slug"
         :command="'echo $DESC'"
       >
-        <p class="terminal-row__output">{{ infos.fields.description }}</p>
+        <p class="terminal-row__output">
+          {{ infos.fields.description }}
+        </p>
       </terminal-row>
       <terminal-row
         :path="infos.fields.slug"
@@ -27,8 +31,12 @@
               class="icon-list__link icon-list__link--website"
               rel="noopener"
             >
-              <span class="u-is-visually-hidden">{{ infos.fields.title }}</span>
-              <span class="icon-list__link-text">Website</span>
+              <span class="u-is-visually-hidden">
+                {{ infos.fields.title }}
+              </span>
+              <span class="icon-list__link-text">
+                Website
+              </span>
             </a>
           </li>
           <li class="icon-list__item">
@@ -37,8 +45,12 @@
               class="icon-list__link icon-list__link--code"
               rel="noopener"
             >
-              <span class="u-is-visually-hidden">{{ infos.fields.title }}</span>
-              <span class="icon-list__link-text">Source Code</span>
+              <span class="u-is-visually-hidden">
+                {{ infos.fields.title }}
+              </span>
+              <span class="icon-list__link-text">
+                Source Code
+              </span>
             </a>
           </li>
         </ul>

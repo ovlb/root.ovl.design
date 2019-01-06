@@ -5,7 +5,8 @@
         title: post.fields.title,
         heroImage: post.fields.heroImage,
         content: post.fields.content
-    }"/>
+      }"
+    />
   </the-content>
 </template>
 
@@ -36,7 +37,7 @@ export default {
   },
   async asyncData({ params, store, error, payload }) {
     const { name } = params
-    const articles = store.state.articles.list
+    // const articles = store.state.articles.list
 
     const { items } = await contentfulClient.getEntries({
       content_type: 'page',

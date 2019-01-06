@@ -1,10 +1,13 @@
 <template>
   <nuxt-link
-    :to="{ path: `/${link}`}"
+    :to="{ path: `/${link}` }"
     :title="title"
     :exact="exact"
     class="main-nav__link"
-    active-class="main-nav__link--active">{{ text }}</nuxt-link>
+    active-class="main-nav__link--active"
+  >
+    {{ text }}
+  </nuxt-link>
 </template>
 
 <script>

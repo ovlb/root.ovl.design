@@ -8,7 +8,8 @@
         contentIntro: post.fields.contentIntro,
         heroImage: post.fields.heroImage,
         content: post.fields.content
-    }"/>
+      }"
+    />
   </the-content>
 </template>
 
@@ -16,7 +17,6 @@
 import TheContent from '~/components/global/TheContent'
 import FullText from '~/components/text/FullText'
 
-import marked from 'marked'
 import contentfulClient from '~/plugins/contentful'
 
 export default {
@@ -29,11 +29,6 @@ export default {
           hid: 'description',
           name: 'description',
           content: this.post.fields.intro
-        },
-        {
-          hid: 'ogType',
-          property: 'og:type',
-          content: 'article'
         },
         {
           hid: 'ogType',
