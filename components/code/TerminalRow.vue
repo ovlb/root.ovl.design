@@ -2,10 +2,16 @@
   <div class="terminal-row">
     <p
       class="terminal-row__path"
-      aria-hidden="true">{{ `~/dev/${path}` }}</p>
+      aria-hidden="true"
+    >
+      {{ `~/dev/${path}` }}
+    </p>
     <p
       class="terminal-row__input"
-      aria-hidden="true">{{ command }}</p>
+      aria-hidden="true"
+    >
+      {{ command }}
+    </p>
     <slot class="terminal-row__output" />
   </div>
 </template>

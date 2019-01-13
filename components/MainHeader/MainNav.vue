@@ -2,20 +2,23 @@
   <nav
     id="site-nav"
     class="main-nav"
-    title="Seitennavigation">
+    title="Seitennavigation"
+  >
     <nuxt-link
       :exact="true"
       class="u-is-visually-hidden"
       to="/"
       title="Zur Startseite"
-      tabindex="-1"/>
+      tabindex="-1"
+    />
     <main-nav-link
       v-for="link in links"
+      :key="link.id"
       :title="link.title"
       :text="link.text"
       :link="link.slug"
       :exact="link.exact"
-      :key="link.id"/>
+    />
   </nav>
 </template>
 

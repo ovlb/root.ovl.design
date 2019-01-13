@@ -6,7 +6,10 @@
     <section class="skip-links">
       <a
         class="skip-link"
-        href="#main-content">Zum Hauptinhalt springen</a>
+        href="#main-content"
+      >
+        Zum Hauptinhalt springen
+      </a>
     </section>
     <nuxt-link
       :exact="true"
@@ -16,9 +19,9 @@
       title="Zur Startseite"
       aria-hidden="true"
     >
-      <ovl-logo/>
+      <ovl-logo />
     </nuxt-link>
-    <main-nav/>
+    <main-nav />
   </header>
 </template>
 

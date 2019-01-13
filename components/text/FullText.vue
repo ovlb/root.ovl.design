@@ -12,17 +12,18 @@
         v-html="parsedText(infos.contentIntro)"
       />
     </header>
-    <picture
-      v-if="infos.heroImage"
-      class="text__hero-image"
-    >
+    <picture v-if="infos.heroImage" class="text__hero-image">
       <source
-        :srcset="srcSet(infos.heroImage.fields.imageSmall.fields.file.url, 'small')"
+        :srcset="
+          srcSet(infos.heroImage.fields.imageSmall.fields.file.url, 'small')
+        "
         media="(max-width: 1199px)"
         sizes="(min-width: 777px) 33vw, 25vw"
       >
       <source
-        :srcset="srcSet(infos.heroImage.fields.imageLarge.fields.file.url, 'large')"
+        :srcset="
+          srcSet(infos.heroImage.fields.imageLarge.fields.file.url, 'large')
+        "
         media="(min-width: 1200px)"
         sizes="(min-width: 1800px) 900px, 50vw"
       >
@@ -31,28 +32,18 @@
         :alt="infos.heroImage.fields.altText"
       >
     </picture>
-    <section
-      v-if="Array.isArray(infos.content)"
-      class="text__body"
-    >
-      <div
-        v-for="item in infos.content"
-        :key="item.sys.id">
+    <section v-if="Array.isArray(infos.content)" class="text__body">
+      <div v-for="item in infos.content" :key="item.sys.id">
         <h2 class="sub-headline">{{ item.fields.title }}</h2>
-        <div v-html="parsedText(item.fields.body)" />
+        <div v-html="parsedText(item.fields.body)"/>
       </div>
     </section>
-    <section
-      v-else
-      class="text__body"
-      v-html="parsedText(infos.content)"
-    />
+    <section v-else class="text__body" v-html="parsedText(infos.content)"/>
   </article>
 </template>
 
 <script>
 import marked from 'marked'
-import contentfulClient from '~/plugins/contentful'
 
 export default {
   filters: {

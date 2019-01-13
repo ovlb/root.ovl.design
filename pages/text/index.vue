@@ -1,6 +1,8 @@
 <template>
   <the-content>
-    <h1 class="main-headline">Worte auf digitalem Papier</h1>
+    <h1 class="main-headline">
+      Worte auf digitalem Papier
+    </h1>
     <text-list :items="list" />
   </the-content>
 </template>
@@ -49,5 +51,4 @@ export default {
 }
 </script>
 
-<style>
-</style>
+<style></style>

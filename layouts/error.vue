@@ -1,7 +1,15 @@
 <template>
   <the-content>
-    <h1 class="main-headline">This page is not what it seems.</h1>
-    <p v-if="error.statusCode === 404">Da ist etwas schief gelaufen. Ich habe vermutlich die Seite, die du eigentlich gesucht hast, gelöscht. Das mache ich manchmal, wenn ich denke, dass ich das Internet aufräumen muss. Zwecklos. Fällt mir dann auch ein. Und ich räume alles wieder zurück. Nur diese Seite. Die habe ich irgendwie vergessen. Sorry!</p>
+    <h1 class="main-headline">
+      This page is not what it seems.
+    </h1>
+    <p v-if="error.statusCode === 404">
+      Da ist etwas schief gelaufen. Ich habe vermutlich die Seite, die du
+      eigentlich gesucht hast, gelöscht. Das mache ich manchmal, wenn ich denke,
+      dass ich das Internet aufräumen muss. Zwecklos. Fällt mir dann auch ein.
+      Und ich räume alles wieder zurück. Nur diese Seite. Die habe ich irgendwie
+      vergessen. Sorry!
+    </p>
   </the-content>
 </template>
 

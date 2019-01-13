@@ -15,6 +15,7 @@
 
   & p {
     font-size: var(--type-medium);
+    margin-bottom: space(half, relative);
     text-indent: 0;
   }
 

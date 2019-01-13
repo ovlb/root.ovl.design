@@ -1,7 +1,7 @@
 <template>
   <main class="homepage-content">
     <h1 class="title">
-      <logo color="#f8f2e3" />
+      <logo color="#f8f2e3"/>
     </h1>
     <nav class="index-nav">
       <nuxt-link
@@ -11,29 +11,17 @@
         class="index-nav-link"
       >{{ link.text }}</nuxt-link>
     </nav>
-    <p
-      class="c-main-content__p"
-      v-html="introText"
-    />
+    <div class="c-main-content__p" v-html="introText"/>
     <section class="o-social-logos">
-      <a
-        href="https://twitter.com/_ovlb"
-        title="Oscar’s Twitter profile"><img
-          src="~assets/img/twitter.png"
-          alt="Twitter logo"
-          class="c-social-logos__logo"></a>
-      <a
-        href="https://github.com/ovlb"
-        title="Oscar’s GitHub profile"><img
-          src="~assets/img/github.png"
-          alt="GitHub logo"
-          class="c-social-logos__logo"></a>
-      <a
-        href="https://keybase.io/ovlb"
-        title="Oscar on Keybase"><img
-          src="~assets/img/keybase.svg"
-          alt="Twitter logo"
-          class="c-social-logos__logo"></a>
+      <a href="https://twitter.com/_ovlb" title="Oscar’s Twitter profile">
+        <img src="~assets/img/twitter.png" alt="Twitter logo" class="c-social-logos__logo">
+      </a>
+      <a href="https://github.com/ovlb" title="Oscar’s GitHub profile">
+        <img src="~assets/img/github.png" alt="GitHub logo" class="c-social-logos__logo">
+      </a>
+      <a href="https://keybase.io/ovlb" title="Oscar on Keybase">
+        <img src="~assets/img/keybase.svg" alt="Twitter logo" class="c-social-logos__logo">
+      </a>
     </section>
   </main>
 </template>
@@ -56,7 +44,7 @@ export default {
   data() {
     return {
       introText:
-        'I am Oscar. I design for web and print. I care about accessibility, usability &amp; performance. I am typophile. I like to think. And owls. If you want to get in touch, <a href="mailto:o@ovl.design" title="Oscar’s E-mail">drop me a line</a> (<a href="res/pgpkey-o-at-ovl-design.asc" title="PGP Key for o@ovl.design">PGP Key</a>).'
+        '<p>I am Oscar. I design for web and print. I care about accessibility, usability &amp; performance. I am typophile. I don’t specialize in pop art. I like to think. And owls.</p><p>During working hours you will find me at <a href="https://www.kitchenstories.com">Kitchen Stories</a>.</p><p>If you want to get in touch, <a href="mailto:o@ovl.design" title="Oscar’s E-mail">drop me a line</a> (<a href="/res/pgpkey-o-at-ovl-design.asc" title="PGP Key for o@ovl.design">PGP Key</a>).</p>'
     }
   },
   computed: {
