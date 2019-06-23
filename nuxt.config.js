@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-const contentfulClient = require('./plugins/contentful')
+const { default: contentfulClient } = require('./plugins/contentful')
 
 export default {
   mode: 'universal',
