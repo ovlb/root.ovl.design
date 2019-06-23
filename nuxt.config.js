@@ -1,4 +1,6 @@
-import contentfulClient from './plugins/contentful'
+require('dotenv').config()
+
+const contentfulClient = require('./plugins/contentful')
 
 export default {
   mode: 'universal',
@@ -62,12 +64,13 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
-
-  env: {
+  modules: [
+    '@nuxtjs/dotenv',
+  ],
+  /* env: {
     cfSpace: process.env.CF_SPACE,
     cfToken: process.env.CF_TOKEN
-  },
+  }, */
   /*
    ** Build configuration
    */
