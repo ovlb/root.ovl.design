@@ -2,7 +2,7 @@
   <the-content class="content--no-padding">
     <full-text
       :infos="{
-        category: post.fields.categories[0].fields.title,
+        category: post.fields.categories ? post.fields.categories[0].fields.title : null,
         date: post.fields.date,
         title: post.fields.title,
         contentIntro: post.fields.contentIntro,
@@ -20,25 +20,29 @@ import contentfulClient from '~/plugins/contentful'
 
 export default {
   head() {
-    const og = this.post.fields.openGraphImage.fields.file
-    return {
-      title: `${this.post.fields.title} « Texte`,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.post.fields.intro
-        },
-        {
-          hid: 'ogType',
-          property: 'og:type',
-          content: 'article'
-        },
-        {
-          hid: 'ogAuthor',
-          property: 'article:author',
-          content: 'https://www.facebook.com/oscar.braunert'
-        },
+    const og = this.post.fields.openGraphImage
+      ? this.post.fields.openGraphImage.fields.file
+      : undefined
+    const meta = [
+      {
+        hid: 'description',
+        name: 'description',
+        content: this.post.fields.intro
+      },
+      {
+        hid: 'ogType',
+        property: 'og:type',
+        content: 'article'
+      },
+      {
+        hid: 'ogAuthor',
+        property: 'article:author',
+        content: 'https://www.facebook.com/oscar.braunert'
+      }
+    ]
+
+    if (og) {
+      meta.push(
         {
           hid: 'ogImage',
           property: 'og:image',
@@ -54,7 +58,12 @@ export default {
           property: 'og:image:height',
           content: og.details.image.height
         }
-      ]
+      )
+    }
+
+    return {
+      title: `${this.post.fields.title} « Texte`,
+      meta
     }
   },
   components: {
