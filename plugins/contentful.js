@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import * as contentful from 'contentful'
-const host = process.env.STAGE === 'preview' ? 'https://preview.contentful.com' : 'https://cdn.contentful.com'
+const host = process.env.STAGE === 'preview' ? 'preview.contentful.com' : 'https://cdn.contentful.com'
 
 const config = {
   space: process.env.CF_SPACE || process.env.cfSpace,
