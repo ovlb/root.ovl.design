@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import TheContent from '~/components/global/TheContent'
 import FullText from '~/components/text/FullText'
 
 import contentfulClient from '~/plugins/contentful'
@@ -59,7 +58,6 @@ export default {
     }
   },
   components: {
-    TheContent,
     FullText
   },
   async asyncData({ params, store, error, payload }) {

@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import TheContent from '~/components/global/TheContent'
 import FullText from '~/components/text/FullText'
 
 import marked from 'marked'
@@ -32,12 +31,12 @@ export default {
     }
   },
   components: {
-    TheContent,
     FullText
   },
   async asyncData({ params, store, error, payload }) {
     const { name } = params
-    // const articles = store.state.articles.list
+
+    if (payload) return { post: payload }
 
     const { items } = await contentfulClient.getEntries({
       content_type: 'page',

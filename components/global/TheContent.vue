@@ -1,16 +1,13 @@
 <template>
-  <main
-    id="main-content"
-    class="content"
-    tabindex="0"
-    aria-label="Hauptinhalt"
-  >
-    <slot />
+  <main id="main-content" class="content" tabindex="0">
+    <slot/>
   </main>
 </template>
 
 <script>
-export default {}
+export default {
+  name: 'TheContent'
+}
 </script>
 
 <style lang="scss">
