@@ -1,8 +1,6 @@
 <template>
   <the-content>
-    <h1 class="main-headline">
-      This page is not what it seems.
-    </h1>
+    <h1 class="main-headline">This page is not what it seems.</h1>
     <p v-if="error.statusCode === 404">
       Da ist etwas schief gelaufen. Ich habe vermutlich die Seite, die du
       eigentlich gesucht hast, gelöscht. Das mache ich manchmal, wenn ich denke,
@@ -14,14 +12,9 @@
 </template>
 
 <script>
-import TheContent from '~/components/global/TheContent.vue'
-
 import contentfulClient from '~/plugins/contentful'
 
 export default {
-  components: {
-    TheContent
-  },
   props: {
     error: {
       type: Object,
