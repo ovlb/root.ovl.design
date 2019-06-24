@@ -54,7 +54,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/main.scss'],
+  css: [
+    '@/assets/css/main.scss',
+    { src: 'prismjs/themes/prism-tomorrow.css', lang: 'css' }
+  ],
 
   /*
    ** Plugins to load before mounting the App
