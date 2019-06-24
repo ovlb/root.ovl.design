@@ -44,6 +44,7 @@
 
 <script>
 import marked from 'marked'
+import Prism from 'prismjs'
 
 export default {
   filters: {
@@ -62,7 +63,11 @@ export default {
   },
   methods: {
     parsedText(text) {
-      return marked(text)
+      return marked(text, {
+        highlight: function(code, lang) {
+          return Prism.highlight(code, Prism.languages[lang || 'none'], lang)
+        }
+      })
     },
     srcSet(url, size) {
       const sizes = {
