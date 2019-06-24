@@ -239,16 +239,30 @@ $bp-text-one: 777px;
 
 .text__body {
   background-color: color(light);
+  display: grid;
+  grid-template-columns: [full-start] 4vmin [main-start] 1fr [main-end] 4vmin [full-end];
   grid-column: content;
-  padding: space(double, viewport);
+  padding: space(double, viewport) 0;
   /* Used to push body over sticky image */
   z-index: 1;
 
+  & > * {
+    grid-column: main;
+  }
+
+  & > pre {
+    font-size-adjust: 0.54;
+    grid-column: full;
+    padding: 4vmin;
+  }
+
   & > p,
+  & > h2,
   & > h3 {
     max-width: 66ch;
   }
 
+  & > h2,
   & > h3 {
     position: relative;
 
