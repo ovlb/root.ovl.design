@@ -45,6 +45,7 @@
 <script>
 import marked from 'marked'
 import Prism from 'prismjs'
+import 'prism-themes/themes/prism-a11y-dark.css'
 
 export default {
   filters: {
@@ -250,32 +251,29 @@ $bp-text-one: 777px;
     grid-column: main;
   }
 
+  & > p > code {
+    background-color: #e3000015;
+    border: 1px solid #00000017;
+    border-radius: 0.25rem;
+    font-family: var(--fonts-mono);
+    font-size: 82%;
+    padding: 0.1rem 0.3rem 0.2rem;
+  }
+
   & > pre {
-    font-size-adjust: 0.54;
+    --clr-accent: #28caf0;
+
+    // font-family: var(--fonts-mono);
+    border-radius: 0 0.25em 0.25em 0;
+    font-size: 85%;
     grid-column: full;
+    margin-bottom: 2vmin;
+    margin-top: 2vmin;
+    line-height: 1.7;
     padding: 4vmin;
-  }
 
-  & > p,
-  & > h2,
-  & > h3 {
-    max-width: 66ch;
-  }
-
-  & > h2,
-  & > h3 {
-    position: relative;
-
-    &::before {
-      background-color: color(main);
-      content: '';
-      height: 2px;
-      right: calc(100% + 0.1em);
-      position: absolute;
-      top: 0.3rem;
-      transform: rotate(45deg);
-      width: 24px;
-      z-index: -1;
+    ::selection {
+      background-color: var(--clr-accent);
     }
   }
 
