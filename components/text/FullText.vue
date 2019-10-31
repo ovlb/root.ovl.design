@@ -12,8 +12,9 @@
         v-html="parsedText(infos.contentIntro)"
       />
     </header>
-    <picture v-if="infos.heroImage" class="text__hero-image">
+    <picture class="text__hero-image">
       <source
+        v-if="infos.heroImage"
         :srcset="
           srcSet(infos.heroImage.fields.imageSmall.fields.file.url, 'small')
         "
@@ -21,6 +22,7 @@
         sizes="(min-width: 777px) 33vw, 25vw"
       >
       <source
+        v-if="infos.heroImage"
         :srcset="
           srcSet(infos.heroImage.fields.imageLarge.fields.file.url, 'large')
         "
@@ -28,17 +30,28 @@
         sizes="(min-width: 1800px) 900px, 50vw"
       >
       <img
+        v-if="infos.heroImage"
         :src="infos.heroImage.fields.imageSmall.fields.file.url"
         :alt="infos.heroImage.fields.altText"
       >
     </picture>
-    <section v-if="Array.isArray(infos.content)" class="text__body">
-      <div v-for="item in infos.content" :key="item.sys.id">
+    <section
+      v-if="Array.isArray(infos.content)"
+      class="text__body"
+    >
+      <div
+        v-for="item in infos.content"
+        :key="item.sys.id"
+      >
         <h2 class="sub-headline">{{ item.fields.title }}</h2>
-        <div v-html="parsedText(item.fields.body)"/>
+        <div v-html="parsedText(item.fields.body)" />
       </div>
     </section>
-    <section v-else class="text__body" v-html="parsedText(infos.content)"/>
+    <section
+      v-else
+      class="text__body"
+      v-html="parsedText(infos.content)"
+    />
   </article>
 </template>
 
@@ -152,8 +165,9 @@ $bp-text-one: 777px;
 .text {
   display: grid;
   grid-template-columns: [main-start content-start] 3fr [main-end aside-start] 1fr [aside-end content-end];
+  grid-template-rows: calc(100vh - var(--layout-header-height)) auto;
   margin: 0 auto;
-  max-width: 1800px;
+  max-width: 900px;
 
   @media screen and (min-width: $bp-text-one) {
     grid-template-columns: [main-start content-start] 2fr [main-end content-end aside-start] 1fr [aside-end];
@@ -164,6 +178,8 @@ $bp-text-one: 777px;
   }
 
   @supports (display: grid) {
+    max-width: 1800px;
+
     & > * {
       margin: 0 !important;
     }
@@ -188,7 +204,6 @@ $bp-text-one: 777px;
   justify-content: center;
   margin-bottom: space(full, relative);
   padding: 1.6rem space(double, viewport) space(triple, relative);
-  -webkit-transition: opacity 0.1s cubic-bezier(0, 0.1, 0.3, 1);
   transition: opacity 0.1s cubic-bezier(0, 0.1, 0.3, 1);
   grid-column: main;
 }
@@ -218,8 +233,7 @@ $bp-text-one: 777px;
   grid-column: aside;
   align-self: stretch;
   position: sticky;
-  top: 5.5rem;
-  height: calc(100vh - 5.5rem);
+  top: var(--layout-header-height);
   width: 100%;
 
   & > img {
@@ -227,11 +241,6 @@ $bp-text-one: 777px;
     object-fit: cover;
     mix-blend-mode: multiply;
     width: 100%;
-  }
-
-  @media (min-width: 642px) {
-    height: calc(100vh - (8vmin + 4.3rem));
-    top: calc(8vmin + 4.3rem);
   }
 
   @media screen and (min-width: $bp-text-one) {

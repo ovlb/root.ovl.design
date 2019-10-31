@@ -58,7 +58,7 @@ export default {
   box-shadow: shadow(lvl1);
   background-color: color(light);
   display: flex;
-  flex-flow: column;
+  height: var(--layout-header-height);
   padding: space(full, viewport) space(double, viewport);
   position: sticky;
   top: 0;
@@ -66,8 +66,6 @@ export default {
 }
 
 .main-header__logo {
-  margin-bottom: space(full, viewport);
-  margin-top: space(double, viewport);
   max-width: 12rem;
   text-align: center;
   width: 50%;
