@@ -5,6 +5,7 @@
   --type-base: 1em;
   --type-medium: 1.2em;
   --type-large: 1.728em;
+
   @media (min-width: 1px) {
     // Values based on http://www.modularscale.com/?1&em&1.2
     --type-very-small: .694em;
@@ -12,5 +13,7 @@
     --type-base: 1em;
     --type-medium: 1.2em;
     --type-large: 1.728em;
+
+    --layout-header-height: 60px;
   }
 }

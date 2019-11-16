@@ -32,15 +32,14 @@ p {
   font-size: var(--type-base);
   line-height: 1.55;
   margin-bottom: 0.25 * space(half, relative);
-
-  &:not([class]) {
-    text-indent: 1em;
-  }
+  text-indent: 1em;
 
   .main-headline + &,
   .sub-headline + &,
   .small-headline + &,
+  .text__body h2 + &,
   .text__body h3 + &,
+  pre + &,
   &:first-child {
     text-indent: 0;
   }
