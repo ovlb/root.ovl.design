@@ -3,12 +3,13 @@ require('dotenv').config()
 const { default: contentfulClient } = require('./plugins/contentful')
 
 export default {
-  mode: 'universal',
-
   /*
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: 'en-UK',
+    },
     titleTemplate: (chunk) => {
       return chunk ? `${chunk} | ovl – code & design` : 'ovl – code & design'
     },
@@ -56,7 +57,6 @@ export default {
    */
   css: [
     '@/assets/css/main.scss',
-    { src: 'prism-themes/themes/prism-a11y-dark.css', lang: 'css' }
   ],
 
   /*
