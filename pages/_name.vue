@@ -1,12 +1,10 @@
 <template>
-  <the-content>
-    <full-text
-      :infos="{
+  <the-content class="content--no-padding">
+    <full-text :infos="{
         title: post.fields.title,
         heroImage: post.fields.heroImage,
         content: post.fields.content
-      }"
-    />
+      }" />
   </the-content>
 </template>
 
