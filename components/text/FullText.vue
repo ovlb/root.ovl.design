@@ -58,7 +58,6 @@
 <script>
 import marked from 'marked'
 import Prism from 'prismjs'
-import 'prism-themes/themes/prism-a11y-dark.css'
 
 export default {
   filters: {

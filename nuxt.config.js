@@ -56,7 +56,7 @@ export default {
    */
   css: [
     '@/assets/css/main.scss',
-    { src: 'prismjs/themes/prism-tomorrow.css', lang: 'css' }
+    { src: 'prism-themes/themes/prism-a11y-dark.css', lang: 'css' }
   ],
 
   /*
