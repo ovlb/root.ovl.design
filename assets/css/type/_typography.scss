@@ -23,7 +23,7 @@
   text-transform: uppercase;
   word-spacing: 0.1em;
 
-  & + p {
+  &+p {
     margin-top: 0;
   }
 }
@@ -32,16 +32,9 @@ p {
   font-size: var(--type-base);
   line-height: 1.55;
   margin-bottom: 0.25 * space(half, relative);
-  text-indent: 1em;
 
-  .main-headline + &,
-  .sub-headline + &,
-  .small-headline + &,
-  .text__body h2 + &,
-  .text__body h3 + &,
-  pre + &,
-  &:first-child {
-    text-indent: 0;
+  &+p {
+    text-indent: 1em;
   }
 }
 
