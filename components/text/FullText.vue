@@ -169,7 +169,7 @@ $bp-text-one: 777px;
   max-width: 900px;
 
   @media screen and (min-width: $bp-text-one) {
-    grid-template-columns: [main-start content-start] 2fr [main-end content-end aside-start] 1fr [aside-end];
+    grid-template-columns: [main-start content-start] minmax(65ch, 2fr) [main-end content-end aside-start] 1fr [aside-end];
   }
 
   @media screen and (min-width: 1200px) {
