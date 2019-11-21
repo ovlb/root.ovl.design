@@ -265,7 +265,7 @@ $bp-text-one: 777px;
     border: 1px solid #00000017;
     border-radius: 0.25rem;
     font-family: var(--fonts-mono);
-    font-size: 82%;
+    font-size: 86%;
     padding: 0.1rem 0.3rem 0.2rem;
   }
 
