@@ -19,8 +19,8 @@
         {{ infos.fields.intro }}
       </p>
 
-      <a
-        :href="linkTarget"
+      <nuxt-link
+        :to="linkTarget"
         :aria-label="`Text ${infos.fields.title} lesen`"
         :class="{ 'article-card__link--external': !infos.fields.isInternal }"
         class="article-card__link"
@@ -28,7 +28,7 @@
         <span aria-hidden="true">
           »
         </span> Text lesen
-      </a>
+      </nuxt-link>
       <p
         v-if="!infos.fields.isInternal"
         class="type-is-aside"
