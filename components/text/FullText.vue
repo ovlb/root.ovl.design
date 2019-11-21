@@ -208,6 +208,10 @@ $bp-text-one: 777px;
 .text__intro {
   color: color(dark);
   font-size: var(--type-medium);
+
+  & > p {
+    font-size: inherit;
+  }
 }
 
 .text__hero-image {
