@@ -10,7 +10,7 @@
     </aside>
     <h2
       :class="{ 'article-card__headline--external': !infos.fields.isInternal }"
-      class="sub-headline article-card__headline"
+      class="article-card__headline"
     >
       {{ infos.fields.title }}
     </h2>
@@ -96,6 +96,8 @@ export default {
 
 .article-card__headline {
   display: inline-block;
+  font-size: var(--type-medium);
+
   margin-top: 0;
   position: relative;
   transition: transform 0.2s cubic-bezier(0, 0.1, 0.3, 1);
@@ -148,6 +150,7 @@ export default {
 }
 
 .article-card__info {
+  font-size: var(--type-small);
   margin-bottom: 2px;
 }
 
