@@ -272,13 +272,16 @@ $bp-text-one: 777px;
     --clr-accent: #28caf0;
 
     // font-family: var(--fonts-mono);
+    background-color: #2b2b2b;
     border-radius: 0 0.25em 0.25em 0;
     font-size: 85%;
     grid-column: full;
     margin-bottom: 2vmin;
     margin-top: 2vmin;
+    overflow: auto;
     line-height: 1.7;
     padding: 4vmin;
+    width: 100%;
 
     ::selection {
       background-color: var(--clr-accent);
