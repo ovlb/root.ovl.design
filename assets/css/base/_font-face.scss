@@ -4,6 +4,7 @@ $static-owlish: 'https://static.owlish.dev/fonts';
   font-family: 'Bridge Text';
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
   src:
     url('#{$static-owlish}/bridge/Regular.woff2') format('woff2'),
     url('#{$static-owlish}/bridge/Regular.woff') format('woff'),
@@ -13,6 +14,7 @@ $static-owlish: 'https://static.owlish.dev/fonts';
   font-family: 'Bridge Text';
   font-weight: normal;
   font-style: italic;
+  font-display: swap;
   src:
     url('#{$static-owlish}/bridge/Regular-Italic.woff2') format('woff2'),
     url('#{$static-owlish}/bridge/Regular-Italic.woff') format('woff'),
@@ -22,6 +24,7 @@ $static-owlish: 'https://static.owlish.dev/fonts';
   font-family: 'Bridge Text';
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
   src:
     url('#{$static-owlish}/bridge/Bold.woff2') format('woff2'),
     url('#{$static-owlish}/bridge/Bold.woff') format('woff'),
@@ -31,6 +34,7 @@ $static-owlish: 'https://static.owlish.dev/fonts';
   font-family: 'LautsprecherDJR';
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
   src:
     url('#{$static-owlish}/lautsprecher/Regular.woff2') format('woff2'),
     url('#{$static-owlish}/lautsprecher/Regular.woff') format('woff'),
@@ -40,6 +44,7 @@ $static-owlish: 'https://static.owlish.dev/fonts';
   font-family: 'LautsprecherDJR';
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
   src:
     url('#{$static-owlish}/lautsprecher/Regular.woff2') format('woff2'),
     url('#{$static-owlish}/lautsprecher/Regular.woff') format('woff'),
