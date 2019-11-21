@@ -8,10 +8,9 @@
         Hello
       </h3>
       <p>
-        Ich bin Oscar. Ich schreibe <a href="/code">
+        My name is Oscar. I write <a href="/code">
           Code
-        </a>. Ich gestalte
-        fürs Web und Print. Ich mag Eulen. Und das ist meine Website.
+        </a>. I design for web and print. I like owls. And this is my website.
       </p>
     </section>
     <nav class="footer-nav">

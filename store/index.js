@@ -16,15 +16,15 @@ export const state = () => ({
     {
       id: 3,
       slug: 'text',
-      title: 'Zum Archiv meiner Texte',
-      text: 'Texte'
+      title: 'A list of written stuff',
+      text: 'Text'
     }
   ],
   footerNavLinks: [
     {
       id: 1323,
-      slug: 'impressum',
-      text: 'Impressum'
+      slug: 'imprint',
+      text: 'Imprint'
     }
   ]
 })

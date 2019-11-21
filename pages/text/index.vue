@@ -1,7 +1,7 @@
 <template>
   <the-content>
     <h1 class="main-headline">
-      Worte auf digitalem Papier
+      Scribbles on digital paper
     </h1>
     <text-list :items="list" />
   </the-content>
