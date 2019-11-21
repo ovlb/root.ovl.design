@@ -42,7 +42,22 @@ export default {
         hid: 'ogImageHeight',
         property: 'og:image:height',
         content: '1260'
-      }
+      },
+      {
+        hid: 'twitterSite',
+        property: 'twitter:site',
+        content: '_ovlb'
+      },
+      {
+        hid: 'twitterCreator',
+        property: 'twitter:creator',
+        content: '_ovlb'
+      },
+      {
+        hid: 'twitterImgAlt',
+        property: 'twitter:image:alt',
+        content: 'An owl sitting on a branch. The letters o v l are added in the top right corner.'
+      },
     ],
     link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
   },

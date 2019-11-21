@@ -1,15 +1,13 @@
 <template>
   <the-content class="content--no-padding">
-    <full-text
-      :infos="{
+    <full-text :infos="{
         category: post.fields.categories ? post.fields.categories[0].fields.title : null,
         date: post.fields.date,
         title: post.fields.title,
         contentIntro: post.fields.contentIntro,
         heroImage: post.fields.heroImage,
         content: post.fields.content
-      }"
-    />
+      }" />
   </the-content>
 </template>
 
@@ -23,6 +21,10 @@ export default {
     const og = this.post.fields.openGraphImage
       ? this.post.fields.openGraphImage.fields.file
       : undefined
+    const altText = this.post.fields.heroImage
+      ? this.post.fields.heroImage.fields.altText
+      : ''
+
     const meta = [
       {
         hid: 'description',
@@ -57,6 +59,11 @@ export default {
           hid: 'ogImageHeight',
           property: 'og:image:height',
           content: og.details.image.height
+        },
+        {
+          hid: 'twitterImgAlt',
+          property: 'twitter:image:alt',
+          content: altText
         }
       )
     }
