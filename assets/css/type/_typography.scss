@@ -1,5 +1,7 @@
 .main-headline {
-  font-size: var(--type-large);
+  color: color(main);
+  font-family: $fonts-secondary;
+  font-size: var(--type-xlarge);
   margin: space(double, relative) 0 space(half, relative);
 
   &:first-child {
@@ -9,7 +11,7 @@
 
 .sub-headline,
 .text__body h2 {
-  font-size: var(--type-medium);
+  font-size: var(--type-large);
   margin: space(full, relative) 0 space(half, relative);
 }
 
@@ -30,7 +32,7 @@
 
 p {
   font-size: var(--type-base);
-  line-height: 1.55;
+  line-height: 1.6;
   margin-bottom: 0.25 * space(half, relative);
 
   &+p {

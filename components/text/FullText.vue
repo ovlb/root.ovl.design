@@ -1,6 +1,6 @@
 <template>
   <article class="text full-width">
-    <header class="text__header">
+    <header class="text__header u-floral-heart-gradient">
       <p
         v-if="infos.date && infos.category"
         class="text__date"
@@ -186,17 +186,6 @@ $bp-text-one: 777px;
 }
 
 .text__header {
-  background-image: linear-gradient(
-      to right,
-      color(main-light),
-      color(main-dark)
-    ),
-    url('~assets/img/icons/floral-heart-dark-red.svg'),
-    linear-gradient(to right, color(main-dark), color(main-light));
-  background-position: 4vmin calc(100% - 2rem), center calc(100% - 1.66rem),
-    calc(100% - 4vmin) calc(100% - 2rem);
-  background-repeat: no-repeat;
-  background-size: 40% 0.125rem, 1rem, 40% 0.125rem;
   color: color(main);
   display: flex;
   flex-direction: column;
@@ -219,6 +208,10 @@ $bp-text-one: 777px;
 .text__intro {
   color: color(dark);
   font-size: var(--type-medium);
+
+  & > p {
+    font-size: inherit;
+  }
 }
 
 .text__hero-image {

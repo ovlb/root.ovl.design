@@ -1,51 +1,52 @@
-$static-base: 'https://static.ovlb.net/fonts';
-$sans-regular-name: 'adagio_sans-regular-webfont';
-$sans-bold-name: 'adagio_sans-semibold-webfont';
-
-$serif-regular-name: 'adagio_serif-regular-webfont';
-$serif-bold-name: 'adagio_serif-semibold-webfont';
+$static-owlish: 'https://static.owlish.dev/fonts';
 
 @font-face {
-  font-family: 'Adagio_Sans';
+  font-family: 'Bridge Text';
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
   src:
-    local('Adagio_Sans'),
-    url('#{$static-base}/#{$sans-regular-name}.woff2') format('woff2'),
-    url('#{$static-base}/#{$sans-regular-name}.woff') format('woff'),
-    url('#{$static-base}/#{$sans-regular-name}.ttf') format('truetype');
+    url('#{$static-owlish}/bridge/Regular.woff2') format('woff2'),
+    url('#{$static-owlish}/bridge/Regular.woff') format('woff'),
 }
 
 @font-face {
-  font-family: 'Adagio_Sans';
+  font-family: 'Bridge Text';
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+  src:
+    url('#{$static-owlish}/bridge/Regular-Italic.woff2') format('woff2'),
+    url('#{$static-owlish}/bridge/Regular-Italic.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'Bridge Text';
   font-weight: bold;
   font-style: normal;
+  font-display: swap;
   src:
-    local('Adagio_Sans Semibold'),
-    url('#{$static-base}/#{$sans-bold-name}.woff2') format('woff2'),
-    url('#{$static-base}/#{$sans-bold-name}.woff') format('woff'),
-    url('#{$static-base}/#{$sans-bold-name}.ttf') format('truetype');
+    url('#{$static-owlish}/bridge/Bold.woff2') format('woff2'),
+    url('#{$static-owlish}/bridge/Bold.woff') format('woff'),
 }
 
 @font-face {
-  font-family: 'Adagio_Serif';
+  font-family: 'LautsprecherDJR';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('#{$static-owlish}/lautsprecher/Regular.woff2') format('woff2'),
+    url('#{$static-owlish}/lautsprecher/Regular.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'LautsprecherDJR';
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
   src:
-    local('Adagio_Serif'),
-    url('#{$static-base}/#{$serif-regular-name}.woff2') format('woff2'),
-    url('#{$static-base}/#{$serif-regular-name}.woff') format('woff'),
-    url('#{$static-base}/#{$serif-regular-name}.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Adagio_Serif';
-  font-weight: bold;
-  font-style: normal;
-  src:
-    local('Adagio_Serif Semibold'),
-    url('#{$static-base}/#{$serif-bold-name}.woff2') format('woff2'),
-    url('#{$static-base}/#{$serif-bold-name}.woff') format('woff'),
-    url('#{$static-base}/#{$serif-bold-name}.ttf') format('truetype');
+    url('#{$static-owlish}/lautsprecher/Regular.woff2') format('woff2'),
+    url('#{$static-owlish}/lautsprecher/Regular.woff') format('woff'),
 }
 
