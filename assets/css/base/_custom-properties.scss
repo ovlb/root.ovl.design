@@ -1,19 +1,20 @@
 :root {
   --fonts-mono: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   // Values based on http://www.modularscale.com/?1&em&1.2
-  --type-very-small: .694em;
-  --type-small: .833em;
-  --type-base: 1em;
-  --type-medium: 1.2em;
-  --type-large: 1.728em;
+  --type-very-small: .694rem;
+  --type-small: .833rem;
+  --type-base: 1rem;
+  --type-medium: 1.2rem;
+  --type-large: 1.728rem;
+  --type-xlarge: 2.488rem;
 
   @media (min-width: 1px) {
     // Values based on http://www.modularscale.com/?1&em&1.2
-    --type-very-small: .694em;
-    --type-small: .833em;
-    --type-base: 1em;
-    --type-medium: 1.2em;
-    --type-large: 1.728em;
+    --type-very-small: .694rem;
+    --type-small: .833rem;
+    --type-base: 1rem;
+    --type-medium: 1.2rem;
+    --type-xlarge: 2.488rem;
 
     --layout-header-height: 60px;
   }
