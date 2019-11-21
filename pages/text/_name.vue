@@ -34,6 +34,16 @@ export default {
         content: this.post.fields.intro
       },
       {
+        hid: 'ogDescription',
+        name: 'og:description',
+        content: this.post.fields.intro
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: this.post.fields.intro
+      },
+      {
         hid: 'ogTitle',
         property: 'og:title',
         content: `${makeTitle(this.post.fields.title)} | ovl – code & design`
