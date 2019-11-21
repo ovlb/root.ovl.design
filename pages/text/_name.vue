@@ -16,6 +16,8 @@ import FullText from '~/components/text/FullText'
 
 import contentfulClient from '~/plugins/contentful'
 
+const makeTitle = (title) => `${title} « Texte`
+
 export default {
   head() {
     const og = this.post.fields.openGraphImage
@@ -30,6 +32,11 @@ export default {
         hid: 'description',
         name: 'description',
         content: this.post.fields.intro
+      },
+      {
+        hid: 'ogTitle',
+        property: 'og:title',
+        content: `${makeTitle(this.post.fields.title)} | ovl – code & design`
       },
       {
         hid: 'ogType',
@@ -69,7 +76,7 @@ export default {
     }
 
     return {
-      title: `${this.post.fields.title} « Texte`,
+      title: makeTitle(this.post.fields.title),
       meta
     }
   },
