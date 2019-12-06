@@ -88,10 +88,10 @@ export default {
   modules: [
     '@nuxtjs/dotenv',
   ],
-  /* env: {
+  env: {
     cfSpace: process.env.CF_SPACE,
     cfToken: process.env.CF_TOKEN
-  }, */
+  },
   /*
    ** Build configuration
    */
