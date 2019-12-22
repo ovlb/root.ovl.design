@@ -1,32 +1,47 @@
 <template>
   <main class="homepage-content">
-    <h1 class="title">
-      <logo color="#f8f2e3"/>
-    </h1>
+    <h1 class="title"><logo color="#f8f2e3" /></h1>
     <nav class="index-nav">
-      <nuxt-link
-        v-for="link in nav"
-        :key="link.id"
-        :to="`/${link.slug}`"
+      <dynamic-anchor
+        v-for="{ id, to, text, useNativeLinkElement } in nav"
+        :key="id"
+        :to="to"
+        :use-native-link-element="useNativeLinkElement"
         class="index-nav-link"
-      >{{ link.text }}</nuxt-link>
+      >
+        {{ text }}
+      </dynamic-anchor>
     </nav>
-    <div class="c-main-content__p" v-html="introText"/>
-    <section class="o-social-logos">
-      <a href="https://twitter.com/_ovlb" title="Oscar’s Twitter profile">
-        <img src="~assets/img/twitter.png" alt="Twitter logo" class="c-social-logos__logo">
+    <div class="c-main-content__p" v-html="introText" />
+    <nav class="o-social-logos" aria-label="External profiles">
+      <a href="https://twitter.com/_ovlb" aria-label="Oscar’s Twitter profile">
+        <img
+          src="~assets/img/twitter.png"
+          alt="Twitter logo"
+          class="c-social-logos__logo"
+        />
       </a>
-      <a href="https://github.com/ovlb" title="Oscar’s GitHub profile">
-        <img src="~assets/img/github.png" alt="GitHub logo" class="c-social-logos__logo">
+      <a href="https://github.com/ovlb" aria-label="Oscar’s GitHub profile">
+        <img
+          src="~assets/img/github.png"
+          alt="GitHub logo"
+          class="c-social-logos__logo"
+        />
       </a>
-      <a href="https://keybase.io/ovlb" title="Oscar on Keybase">
-        <img src="~assets/img/keybase.svg" alt="Twitter logo" class="c-social-logos__logo">
+      <a href="https://keybase.io/ovlb" aria-label="Oscar on Keybase">
+        <img
+          src="~assets/img/keybase.svg"
+          alt="Twitter logo"
+          class="c-social-logos__logo"
+        />
       </a>
-    </section>
+    </nav>
   </main>
 </template>
 
 <script>
+import DynamicAnchor from '@tournant/dynamic-anchor'
+
 import Logo from '~/components/OvlLogo.vue'
 
 import { mapState } from 'vuex'
@@ -39,7 +54,8 @@ export default {
   },
   layout: 'homepage',
   components: {
-    Logo
+    Logo,
+    DynamicAnchor
   },
   data() {
     return {
