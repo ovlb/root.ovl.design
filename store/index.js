@@ -9,15 +9,22 @@ export const state = () => ({
     }, */
     {
       id: 22341341323421,
-      slug: 'code',
+      to: { path: '/code' },
       title: 'Code I wrote',
       text: 'Code'
     },
     {
       id: 3,
-      slug: 'text',
+      to: { path: '/text' },
       title: 'A list of written stuff',
       text: 'Text'
+    },
+    {
+      id: 4,
+      to: 'https://talks.ovl.design',
+      title: 'Presentations I gave',
+      text: 'Talks',
+      useNativeLinkElement: true
     }
   ],
   footerNavLinks: [
