@@ -1,15 +1,7 @@
 <template>
-  <header
-    class="main-header"
-    aria-label="Hauptmenü"
-  >
+  <header class="main-header" aria-label="Hauptmenü">
     <section class="skip-links">
-      <a
-        class="skip-link"
-        href="#main-content"
-      >
-        Zum Hauptinhalt springen
-      </a>
+      <a class="skip-link" href="#main-content"> Jump to main content </a>
     </section>
     <nuxt-link
       :exact="true"
@@ -41,6 +33,8 @@ export default {
 @import '~assets/css/sass/import';
 
 .skip-link {
+  background-color: color(light);
+  padding: space(full, relative);
   position: absolute;
   transform: translate(-500%);
   transition: transform 0.2s ease-out;
