@@ -88,7 +88,7 @@ export default {
 }
 
 .code-card__icons {
-  padding-left: 2ch;
+  padding-left: 0;
 }
 
 .icon-list {

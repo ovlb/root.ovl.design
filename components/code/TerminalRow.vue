@@ -1,17 +1,9 @@
 <template>
   <div class="terminal-row">
-    <p
-      class="terminal-row__path"
-      aria-hidden="true"
-    >
+    <div class="terminal-row__path" aria-hidden="true">
       {{ `~/dev/${path}` }}
-    </p>
-    <p
-      class="terminal-row__input"
-      aria-hidden="true"
-    >
-      {{ command }}
-    </p>
+    </div>
+    <div class="terminal-row__input" aria-hidden="true">{{ command }}</div>
     <slot class="terminal-row__output" />
   </div>
 </template>
@@ -38,6 +30,10 @@ export default {
   & + & {
     margin-top: space(full, viewport);
   }
+
+  & > * + * {
+    margin-top: 0.25rem;
+  }
 }
 
 .terminal-row__path {
@@ -46,7 +42,6 @@ export default {
 }
 
 .terminal-row__output {
-  padding-left: 2ch;
 }
 
 .terminal-row__input {
