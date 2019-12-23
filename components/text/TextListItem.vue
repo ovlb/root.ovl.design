@@ -4,9 +4,7 @@
     class="article-card"
   >
     <aside class="article-card__aside">
-      <p class="article-card__info">
-        {{ infos.fields.date | displayDate }}
-      </p>
+      <p class="article-card__info">{{ displayDate(infos.fields.date) }}</p>
     </aside>
     <h2
       :class="{ 'article-card__headline--external': !infos.fields.isInternal }"
@@ -15,20 +13,19 @@
       {{ infos.fields.title }}
     </h2>
     <div class="article-card__text">
-      <p class="article-card__teaser">
-        {{ infos.fields.intro }}
-      </p>
+      <p class="article-card__teaser">{{ infos.fields.intro }}</p>
 
-      <nuxt-link
+      <dynamic-anchor
         :to="linkTarget"
-        :aria-label="`Text ${infos.fields.title} lesen`"
+        :use-native-link-element="!infos.fields.isInternal"
         :class="{ 'article-card__link--external': !infos.fields.isInternal }"
         class="article-card__link"
       >
-        <span aria-hidden="true">
-          »
-        </span> Text lesen
-      </nuxt-link>
+        <span aria-hidden="true">» Read</span>
+        <span class="u-is-visually-hidden">
+          Read full text of {{ infos.fields.title }}
+        </span>
+      </dynamic-anchor>
       <p
         v-if="!infos.fields.isInternal"
         class="type-is-aside"
@@ -42,13 +39,11 @@
 </template>
 
 <script>
-export default {
-  filters: {
-    displayDate: (value) => {
-      const d = new Date(value)
+import DynamicAnchor from '@tournant/dynamic-anchor'
 
-      return d.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })
-    }
+export default {
+  components: {
+    DynamicAnchor
   },
   props: {
     infos: {
@@ -63,6 +58,13 @@ export default {
       return isInternal
         ? `/text/${slug}`
         : this.infos.fields.externalPost.fields.link
+    }
+  },
+  methods: {
+    displayDate: (value) => {
+      const d = new Date(value)
+
+      return d.toLocaleDateString('en-UK', { month: 'long', year: 'numeric' })
     }
   }
 }
