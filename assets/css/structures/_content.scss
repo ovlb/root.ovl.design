@@ -15,6 +15,10 @@
       grid-column: 1 / -1;
       width: 100%;
     }
+
+    &--narrow {
+      grid-template-columns: 1fr minmax(75vmin, 1fr) 1fr;
+    }
   }
 
   &--no-padding {
@@ -31,7 +35,7 @@
 
     font-family: monospace;
     font-size: 1.2em;
-    background-color: color(dark);
+    background-color: #222325;
     color: color(light);
 
     ::selection {

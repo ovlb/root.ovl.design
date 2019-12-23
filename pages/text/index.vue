@@ -1,9 +1,7 @@
 <template>
-  <the-content>
+  <the-content class="content--narrow">
     <header class="archive-header u-floral-heart-gradient">
-      <h1 class="main-headline">
-        Scribbles on digital paper
-      </h1>
+      <h1 class="main-headline">Scribbles on digital paper</h1>
     </header>
     <text-list :items="list" />
   </the-content>
@@ -55,7 +53,11 @@ export default {
 
 <style>
 .archive-header {
+  background-position: 4vmin calc(100% - 1rem), center calc(100% - 0.66rem),
+    calc(100% - 4vmin) calc(100% - 1rem);
+  margin-bottom: 5vh;
   min-height: 33vh;
+  padding-bottom: 5vh;
   padding-top: 10vh;
   text-align: center;
 }
