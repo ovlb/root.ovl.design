@@ -2,6 +2,8 @@ require('dotenv').config()
 
 const { default: contentfulClient } = require('./plugins/contentful')
 
+const robots = process.env.STAGE === 'preview' ? { name: 'robots', content: 'noindex,nofollow' } : {}
+
 export default {
   /*
    ** Headers of the page
@@ -16,6 +18,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      robots,
       {
         hid: 'description',
         name: 'description',
