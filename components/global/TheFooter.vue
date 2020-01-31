@@ -1,16 +1,10 @@
 <template>
-  <footer
-    class="site-footer"
-    aria-label="Main Footer"
-  >
+  <footer class="site-footer" aria-label="Main Footer">
     <section>
-      <h3 class="sub-headline u-is-visually-hidden">
-        Hello
-      </h3>
+      <h3 class="sub-headline u-is-visually-hidden">Hello</h3>
       <p>
-        My name is Oscar. I write <a href="/code">
-          Code
-        </a>. I design for web and print. I like owls. And this is my website.
+        My name is Oscar. I write <a href="/code"> Code </a>. I design for web
+        and print. I like owls. And this is my website.
       </p>
     </section>
     <nav class="footer-nav">
@@ -40,8 +34,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
-
 .site-footer {
   font-size: var(--type-small);
   margin-bottom: space(full, viewport);

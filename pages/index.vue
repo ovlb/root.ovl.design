@@ -72,8 +72,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
-
 .homepage-content {
   max-width: 40rem;
   padding: 8vmin;

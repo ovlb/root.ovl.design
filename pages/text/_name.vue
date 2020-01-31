@@ -1,13 +1,17 @@
 <template>
   <the-content class="content--no-padding">
-    <full-text :infos="{
-        category: post.fields.categories ? post.fields.categories[0].fields.title : null,
+    <full-text
+      :infos="{
+        category: post.fields.categories
+          ? post.fields.categories[0].fields.title
+          : null,
         date: post.fields.date,
         title: post.fields.title,
         contentIntro: post.fields.contentIntro,
         heroImage: post.fields.heroImage,
         content: post.fields.content
-      }" />
+      }"
+    />
   </the-content>
 </template>
 
@@ -118,5 +122,4 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
 </style>

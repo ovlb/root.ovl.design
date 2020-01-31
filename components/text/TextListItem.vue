@@ -71,8 +71,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
-
 .article-card {
   background-image: url('~assets/img/icons/floral-heart-dark-red.svg');
   background-position: center calc(100% - 0.66rem);

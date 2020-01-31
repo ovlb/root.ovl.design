@@ -87,7 +87,11 @@ export default {
    */
   modules: [
     '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    scss: ['assets/css/sass/_import.scss']
+  },
   env: {
     cfSpace: process.env.CF_SPACE,
     cfToken: process.env.CF_TOKEN

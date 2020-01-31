@@ -1,12 +1,8 @@
 <template>
-  <div class="homepage">
-    <nuxt />
-  </div>
+  <div class="homepage"><nuxt /></div>
 </template>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
-
 .homepage {
   background-color: color(main);
   color: color(light);

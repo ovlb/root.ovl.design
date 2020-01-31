@@ -1,10 +1,9 @@
 <template>
   <article class="text full-width">
     <header class="text__header u-floral-heart-gradient">
-      <p
-        v-if="infos.date && infos.category"
-        class="text__date"
-      >{{ infos.category }}—{{ infos.date | displayDate }}</p>
+      <p v-if="infos.date && infos.category" class="text__date">
+        {{ infos.category }}—{{ infos.date | displayDate }}
+      </p>
       <h1 class="main-headline text__headline">{{ infos.title }}</h1>
       <section
         v-if="infos.contentIntro"
@@ -20,7 +19,7 @@
         "
         media="(max-width: 1199px)"
         sizes="(min-width: 777px) 33vw, 25vw"
-      >
+      />
       <source
         v-if="infos.heroImage"
         :srcset="
@@ -28,30 +27,20 @@
         "
         media="(min-width: 1200px)"
         sizes="(min-width: 1800px) 900px, 50vw"
-      >
+      />
       <img
         v-if="infos.heroImage"
         :src="infos.heroImage.fields.imageSmall.fields.file.url"
         :alt="infos.heroImage.fields.altText"
-      >
+      />
     </picture>
-    <section
-      v-if="Array.isArray(infos.content)"
-      class="text__body"
-    >
-      <div
-        v-for="item in infos.content"
-        :key="item.sys.id"
-      >
+    <section v-if="Array.isArray(infos.content)" class="text__body">
+      <div v-for="item in infos.content" :key="item.sys.id">
         <h2 class="sub-headline">{{ item.fields.title }}</h2>
         <div v-html="parsedText(item.fields.body)" />
       </div>
     </section>
-    <section
-      v-else
-      class="text__body"
-      v-html="parsedText(infos.content)"
-    />
+    <section v-else class="text__body" v-html="parsedText(infos.content)" />
   </article>
 </template>
 
@@ -157,8 +146,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
-
 $bp-text-one: 777px;
 
 .text {

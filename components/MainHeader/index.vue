@@ -30,8 +30,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
-
 .skip-link {
   background-color: color(light);
   padding: space(full, relative);

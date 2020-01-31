@@ -1,30 +1,14 @@
 <template>
   <li class="code-card">
     <article>
-      <terminal-row
-        :path="infos.fields.slug"
-        :command="'echo $NAME'"
-      >
-        <h2 class="terminal-row__output">
-          {{ infos.fields.title }}
-        </h2>
+      <terminal-row :path="infos.fields.slug" :command="'echo $NAME'">
+        <h2 class="terminal-row__output">{{ infos.fields.title }}</h2>
       </terminal-row>
-      <terminal-row
-        :path="infos.fields.slug"
-        :command="'echo $DESC'"
-      >
-        <p class="terminal-row__output">
-          {{ infos.fields.description }}
-        </p>
+      <terminal-row :path="infos.fields.slug" :command="'echo $DESC'">
+        <p class="terminal-row__output">{{ infos.fields.description }}</p>
       </terminal-row>
-      <terminal-row
-        :path="infos.fields.slug"
-        :command="'echo $LINKS'"
-      >
-        <ul
-          class="icon-list code-card__icons"
-          aria-label="Detail links"
-        >
+      <terminal-row :path="infos.fields.slug" :command="'echo $LINKS'">
+        <ul class="icon-list code-card__icons" aria-label="Detail links">
           <li class="icon-list__item">
             <a
               :href="infos.fields.website"
@@ -34,9 +18,7 @@
               <span class="u-is-visually-hidden">
                 {{ infos.fields.title }}
               </span>
-              <span class="icon-list__link-text">
-                Website
-              </span>
+              <span class="icon-list__link-text"> Website </span>
             </a>
           </li>
           <li class="icon-list__item">
@@ -48,9 +30,7 @@
               <span class="u-is-visually-hidden">
                 {{ infos.fields.title }}
               </span>
-              <span class="icon-list__link-text">
-                Source Code
-              </span>
+              <span class="icon-list__link-text"> Source Code </span>
             </a>
           </li>
         </ul>
@@ -76,8 +56,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
-
 .code-card {
   font-family: monospace;
   list-style: none;

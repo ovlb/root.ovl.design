@@ -36,8 +36,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
-
 .main-nav {
   align-items: flex-start;
   display: flex;

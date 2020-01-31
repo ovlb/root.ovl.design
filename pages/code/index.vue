@@ -107,8 +107,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
-
 .content--code {
 }
 

@@ -1,10 +1,12 @@
 <template>
   <the-content class="content--no-padding">
-    <full-text :infos="{
+    <full-text
+      :infos="{
         title: post.fields.title,
         heroImage: post.fields.heroImage,
         content: post.fields.content
-      }" />
+      }"
+    />
   </the-content>
 </template>
 
@@ -51,5 +53,4 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
 </style>

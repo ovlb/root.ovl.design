@@ -105,8 +105,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~assets/css/sass/import';
-
 .ovl-logo {
   display: inline-block;
   fill: #f8f2e3;

@@ -29,6 +29,7 @@
     "sass-loader": "^7.1.0"
   },
   "devDependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^8.2.1",
     "eslint": "^5.11.1",
