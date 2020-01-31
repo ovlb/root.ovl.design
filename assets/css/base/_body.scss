@@ -1,6 +1,6 @@
 body {
-  background-color: color(light);
-  color: color(dark);
+  background-color: var(--clr-bg);
+  color: var(--clr-fg);
   display: flex;
   flex-flow: column;
   min-height: 100vh;

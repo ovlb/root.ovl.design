@@ -98,10 +98,10 @@ export default {
 }
 
 .icon-list__link-text {
-  background-color: color(light);
+  background-color: var(--clr-fg);
   border-radius: 0.25em;
   display: block;
-  color: color(dark);
+  color: var(--clr-bg);
   font-size: var(--type-small);
   top: calc(100% + 0.25em);
   left: -0.25em;

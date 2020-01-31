@@ -49,7 +49,7 @@ export default {
 
 .main-nav__link {
   backface-visibility: hidden;
-  color: color(main);
+  color: var(--clr-accent);
   display: block;
   padding: space(half, relative) space(full, relative);
   text-align: right;
@@ -63,7 +63,7 @@ export default {
   }
 
   &:visited {
-    color: color(main);
+    color: var(--clr-accent);
   }
 
   &--active {

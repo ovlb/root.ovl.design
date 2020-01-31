@@ -8,6 +8,6 @@
 }
 
 ::selection {
-  background-color: color(main);
-  color: color(light);
+  background-color: var(--clr-accent);
+  color: var(--clr-fg);
 }

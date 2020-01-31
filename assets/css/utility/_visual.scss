@@ -7,11 +7,11 @@
 .u-floral-heart-gradient {
   background-image: linear-gradient(
       to right,
-      color(main-light),
-      color(main-dark)
+      var(--clr-accent-light),
+      var(--clr-accent-dark)
     ),
-    url('~assets/img/icons/floral-heart-dark-red.svg'),
-    linear-gradient(to right, color(main-dark), color(main-light));
+    var(--layout-heart),
+    linear-gradient(to right, var(--clr-accent-dark), var(--clr-accent-light));
   background-position: 4vmin calc(100% - 2rem), center calc(100% - 1.66rem),
     calc(100% - 4vmin) calc(100% - 2rem);
   background-repeat: no-repeat;

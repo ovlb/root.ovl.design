@@ -1,8 +1,8 @@
 button {
   background: none;
-  border: 1px solid color(main-dark);
+  border: 1px solid var(--clr-accent-dark);
   border-radius: .25em 0 .25em .25em;
-  color: color(main);
+  color: var(--clr-accent);
   cursor: pointer;
   padding: space(half, relative);
 }

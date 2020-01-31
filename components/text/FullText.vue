@@ -173,7 +173,7 @@ $bp-text-one: 777px;
 }
 
 .text__header {
-  color: color(main);
+  color: var(--clr-accent);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -184,7 +184,7 @@ $bp-text-one: 777px;
 }
 
 .text__date {
-  color: color(dark);
+  color: var(--clr-fg);
   font-size: var(--type-small);
 }
 
@@ -193,7 +193,7 @@ $bp-text-one: 777px;
 }
 
 .text__intro {
-  color: color(dark);
+  color: var(--clr-fg);
   font-size: var(--type-medium);
 
   & > p {
@@ -202,11 +202,11 @@ $bp-text-one: 777px;
 }
 
 .text__hero-image {
-  background-color: color(main);
+  background-color: var(--clr-accent);
   background-image: linear-gradient(
     to bottom left,
-    color(main-dark),
-    color(main-light)
+    var(--clr-accent-dark),
+    var(--clr-main-light)
   );
   clip-path: polygon(0% 0, 100% 0%, 100% 100%, 6vmin 100%);
   grid-column: aside;
@@ -227,7 +227,7 @@ $bp-text-one: 777px;
 }
 
 .text__body {
-  background-color: color(light);
+  background-color: var(--clr-bg);
   display: grid;
   grid-template-columns: [full-start] 4vmin [main-start] 1fr [main-end] 4vmin [full-end];
   grid-column: content;
@@ -269,7 +269,7 @@ $bp-text-one: 777px;
   }
 
   & blockquote {
-    border-left: 2px solid color(text-light);
+    border-left: 2px solid var(--clr-decent);
     margin: space(full, relative) 0 space(double, relative);
     max-width: 55ch;
     line-height: 1.4;

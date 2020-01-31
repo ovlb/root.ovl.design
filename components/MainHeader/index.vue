@@ -6,7 +6,6 @@
     <nuxt-link
       :exact="true"
       class="main-header__logo"
-      color="#0e0e0e"
       to="/"
       title="Zur Startseite"
       aria-hidden="true"
@@ -31,7 +30,7 @@ export default {
 
 <style lang="scss">
 .skip-link {
-  background-color: color(light);
+  background-color: var(--clr-bg);
   padding: space(full, relative);
   position: absolute;
   transform: translate(-500%);
@@ -46,9 +45,9 @@ export default {
 
 .main-header {
   align-items: center;
-  border-bottom: 1px solid color(main-light);
+  border-bottom: 1px solid var(--clr-main-light);
   box-shadow: shadow(lvl1);
-  background-color: color(light);
+  background-color: var(--clr-bg);
   display: flex;
   height: var(--layout-header-height);
   padding: space(full, viewport) space(double, viewport);

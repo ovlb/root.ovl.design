@@ -4,8 +4,8 @@
 
 <style lang="scss">
 .homepage {
-  background-color: color(main);
-  color: color(light);
+  background-color: var(--clr-main);
+  color: var(--clr-light);
   min-height: 100vh;
   width: 100vw;
 
@@ -19,13 +19,13 @@
     color: currentColor;
 
     &:focus {
-      outline: 2px dotted color(light);
+      outline: 2px dotted var(--clr-fg);
     }
   }
 
   ::selection {
-    background-color: color(light);
-    color: color(main);
+    background-color: var(--clr-fg);
+    color: var(--clr-accent);
   }
 }
 </style>

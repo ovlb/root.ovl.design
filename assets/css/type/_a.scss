@@ -1,5 +1,5 @@
 a {
-  color: color(main);
+  color: var(--clr-accent);
   text-decoration: underline;
 
   &:hover {
@@ -7,11 +7,11 @@ a {
   }
 
   &:visited {
-    color: color(main-dark);
+    color: var(--clr-accent-dark);
   }
 
   &:focus {
-    outline: 2px dotted color(main);
+    outline: 2px dotted var(--clr-accent);
   }
 
   &.nuxt-link-active {

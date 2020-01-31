@@ -4,7 +4,7 @@
     class="article-card"
   >
     <aside class="article-card__aside">
-      <p class="article-card__info">{{ displayDate(infos.fields.date) }}</p>
+      {{ displayDate(infos.fields.date) }}
     </aside>
     <h2
       :class="{ 'article-card__headline--external': !infos.fields.isInternal }"
@@ -72,7 +72,7 @@ export default {
 
 <style lang="scss">
 .article-card {
-  background-image: url('~assets/img/icons/floral-heart-dark-red.svg');
+  background-image: var(--layout-heart);
   background-position: center calc(100% - 0.66rem);
   background-repeat: no-repeat;
   background-size: 1rem;
@@ -103,23 +103,24 @@ export default {
   transition: transform 0.2s cubic-bezier(0, 0.1, 0.3, 1);
 
   &::before {
-    background-color: color(main-light);
+    background-color: var(--clr-accent-light);
     content: '';
     height: space(full, viewport);
     left: 0;
     position: absolute;
     bottom: 0;
     width: space(half, viewport);
+    z-index: -1;
 
     @supports (mix-blend-mode: color) {
       backface-visibility: hidden;
-      left: -2vmin;
-      mix-blend-mode: multiply;
+      left: -4px;
+      // mix-blend-mode: multiply;
       height: space(half, viewport);
       transition: transform 0.2s cubic-bezier(0, 0.1, 0.3, 1);
       transform: rotate(45deg) translate(-49%, -150%) scale(0.5, 0.5);
       transform-origin: left bottom;
-      width: calc(100% + 2vmin + 4px);
+      width: calc(100% + 4px);
       will-change: transform;
     }
   }
@@ -144,13 +145,9 @@ export default {
 }
 
 .article-card__aside {
-  color: color(text-light);
+  color: var(--clr-decent);
   font-size: var(--type-small);
   // margin-top: space(full, viewport);
-}
-
-.article-card__info {
-  font-size: var(--type-small);
   margin-bottom: 2px;
 }
 

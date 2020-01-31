@@ -1,10 +1,10 @@
 <template>
   <svg
-    :style="fillColor"
     class="ovl-logo"
     data-name="Ebene 1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 761.26 141.33"
+    :style="{ fill: fillColor }"
   >
     <title>ovl – code & gebrauchsgraphik</title>
     <g id="ovl">
@@ -89,16 +89,9 @@
 <script>
 export default {
   props: {
-    color: {
+    fillColor: {
       type: String,
-      default: '#b00000'
-    }
-  },
-  computed: {
-    fillColor() {
-      return {
-        fill: this.color || '#b00000'
-      }
+      default: 'currentColor'
     }
   }
 }
@@ -107,7 +100,6 @@ export default {
 <style lang="scss">
 .ovl-logo {
   display: inline-block;
-  fill: #f8f2e3;
   max-width: 18rem;
   width: 75%;
 }

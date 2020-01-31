@@ -1,5 +1,5 @@
 .main-headline {
-  color: color(main);
+  color: var(--clr-accent);
   font-family: $fonts-secondary;
   font-size: var(--type-xlarge);
   margin: space(double, relative) 0 space(half, relative);
@@ -45,6 +45,6 @@ p {
 }
 
 .type-is-aside {
-  color: color(text-light);
+  color: var(--clr-decent);
   font-size: var(--type-small);
 }

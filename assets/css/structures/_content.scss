@@ -32,11 +32,19 @@
   &--dark {
     --clr-accent: #28caf0;
     --clr-red: #f76050;
+    --clr-bg: #222325;
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --clr-fg: var(--clr-fg);
+        --clr-bg: var(--clr-bg);
+      }
+    }
 
     font-family: monospace;
     font-size: 1.2em;
-    background-color: #222325;
-    color: color(light);
+    background-color: var(--clr-bg);
+    color: var(--clr-fg);
 
     ::selection {
       background-color: var(--clr-accent);
