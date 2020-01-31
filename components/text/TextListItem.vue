@@ -114,7 +114,7 @@ export default {
 
     @supports (mix-blend-mode: color) {
       backface-visibility: hidden;
-      left: -4px;
+      left: -12px;
       // mix-blend-mode: multiply;
       height: space(half, viewport);
       transition: transform 0.2s cubic-bezier(0, 0.1, 0.3, 1);
