@@ -34,17 +34,9 @@
     --clr-red: #f76050;
     --clr-bg: #222325;
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --clr-fg: var(--clr-fg);
-        --clr-bg: var(--clr-bg);
-      }
-    }
-
     font-family: monospace;
     font-size: 1.2em;
     background-color: var(--clr-bg);
-    color: var(--clr-fg);
-
+    color: var(--clr-light);
   }
 }

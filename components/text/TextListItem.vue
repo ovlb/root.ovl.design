@@ -72,7 +72,7 @@ export default {
 
 <style lang="scss">
 .article-card {
-  background-image: var(--layout-heart);
+  background-image: var(--layout-fleuron);
   background-position: center calc(100% - 0.66rem);
   background-repeat: no-repeat;
   background-size: 1rem;
