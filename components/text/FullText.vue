@@ -262,10 +262,6 @@ $bp-text-one: 777px;
     line-height: 1.7;
     padding: 4vmin;
     width: 100%;
-
-    ::selection {
-      background-color: var(--clr-accent);
-    }
   }
 
   & blockquote {
