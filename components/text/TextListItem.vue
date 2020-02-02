@@ -103,26 +103,19 @@ export default {
   transition: transform 0.2s cubic-bezier(0, 0.1, 0.3, 1);
 
   &::before {
+    backface-visibility: hidden;
     background-color: var(--clr-accent-light);
+    bottom: -0.125rem;
     content: '';
-    height: space(full, viewport);
-    left: 0;
+    height: space(half, viewport);
+    left: -1rem;
     position: absolute;
-    bottom: 0;
-    width: space(half, viewport);
+    transform-origin: left bottom;
+    transform: rotate(45deg) translate(-49%, -150%) scale(0.5, 0.5);
+    transition: transform 0.2s cubic-bezier(0, 0.1, 0.3, 1);
+    width: calc(100% + 1.25rem);
+    will-change: transform;
     z-index: -1;
-
-    @supports (mix-blend-mode: color) {
-      backface-visibility: hidden;
-      left: -12px;
-      // mix-blend-mode: multiply;
-      height: space(half, viewport);
-      transition: transform 0.2s cubic-bezier(0, 0.1, 0.3, 1);
-      transform: rotate(45deg) translate(-49%, -150%) scale(0.5, 0.5);
-      transform-origin: left bottom;
-      width: calc(100% + 4px);
-      will-change: transform;
-    }
   }
 
   &--external {
