@@ -5,15 +5,19 @@
 }
 
 .u-floral-heart-gradient {
+  --gradient-size: 40% 0.125rem;
+  --gradient-bottom-offset: calc(100% - 2rem);
+  --fleuron-bottom-offset: 1.66rem;
+
   background-image: linear-gradient(
       to right,
       var(--clr-accent-light),
       var(--clr-accent-dark)
     ),
-    var(--layout-heart),
+    var(--layout-fleuron),
     linear-gradient(to right, var(--clr-accent-dark), var(--clr-accent-light));
-  background-position: 4vmin calc(100% - 2rem), center calc(100% - 1.66rem),
-    calc(100% - 4vmin) calc(100% - 2rem);
+  background-position: 4vmin var(--gradient-bottom-offset), center calc(100% - var(--fleuron-bottom-offset)),
+    calc(100% - 4vmin) var(--gradient-bottom-offset);
   background-repeat: no-repeat;
-  background-size: 40% 0.125rem, 1rem, 40% 0.125rem;
+  background-size: var(--gradient-size), 1rem, var(--gradient-size);
 }

@@ -23,7 +23,7 @@
   --clr-accent-light: var(--clr-main-light);
   --clr-decent: var(--clr-dark-lighter);
 
-  --layout-heart: url('~assets/img/icons/floral-heart-dark-red.svg');
+  --layout-fleuron: url('~assets/img/icons/floral-heart-dark-red.svg');
 }
 
 @media (prefers-color-scheme: dark) {
@@ -35,6 +35,6 @@
     --clr-accent-light: var(--clr-main-dark);
     --clr-decent: var(--clr-light-darker);
 
-    --layout-heart: url('~assets/img/icons/floral-heart-light-red.svg');
+    --layout-fleuron: url('~assets/img/icons/floral-heart-light-red.svg');
   }
 }

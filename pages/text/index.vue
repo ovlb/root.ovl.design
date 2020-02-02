@@ -53,8 +53,9 @@ export default {
 
 <style>
 .archive-header {
-  background-position: 4vmin calc(100% - 1rem), center calc(100% - 0.66rem),
-    calc(100% - 4vmin) calc(100% - 1rem);
+  --gradient-bottom-offset: calc(100% - 1rem);
+  --fleuron-bottom-offset: 0.66rem;
+
   margin-bottom: 5vh;
   min-height: 33vh;
   padding-bottom: 5vh;
