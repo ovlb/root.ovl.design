@@ -54,7 +54,7 @@ export default {
     displayDate: (value) => {
       const d = new Date(value)
 
-      return d.toLocaleDateString('de-DE', { month: 'long', year: 'numeric' })
+      return d.toLocaleDateString('en-UK', { month: 'long', year: 'numeric' })
     }
   },
   props: {
