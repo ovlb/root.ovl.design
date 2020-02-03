@@ -135,13 +135,14 @@ export default {
 .article-card__text {
   display: flex;
   flex-direction: column;
+  margin-top: 0.25rem;
 }
 
 .article-card__aside {
   color: var(--clr-decent);
   font-size: var(--type-small);
   // margin-top: space(full, viewport);
-  margin-bottom: 2px;
+  margin-bottom: 0.125rem;
 }
 
 .article-card__link {

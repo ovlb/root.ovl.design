@@ -1,9 +1,11 @@
 $colors: (
   main: #b00000,
+  main-darker: #d23838,
   main-light: lighten(#b00000, 30),
   main-dark: darken(#b00000, 10),
   light: #f8f2e3,
   dark: #0e0e0e,
-  dark-lighter: #685d5d,
-  light-darker: #cdc9bd
+  dark-lighter: #161616,
+  dark-light: #685d5d,
+  light-dark: #cdc9bd
 );

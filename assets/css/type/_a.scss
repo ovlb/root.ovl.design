@@ -6,9 +6,6 @@ a {
     text-decoration: none;
   }
 
-  &:visited {
-    color: var(--clr-accent-dark);
-  }
 
   &:focus {
     outline: 2px dotted var(--clr-accent);

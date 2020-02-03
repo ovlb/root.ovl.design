@@ -21,7 +21,7 @@
   --clr-accent: var(--clr-main);
   --clr-accent-dark: var(--clr-main-dark);
   --clr-accent-light: var(--clr-main-light);
-  --clr-decent: var(--clr-dark-lighter);
+  --clr-decent: var(--clr-dark-light);
 
   --layout-fleuron: url('~assets/img/icons/floral-heart-dark-red.svg');
 }
@@ -29,11 +29,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --clr-fg: var(--clr-light);
-    --clr-bg: var(--clr-dark);
-    --clr-accent: var(--clr-main-light);
+    --clr-bg: var(--clr-dark-lighter);
+    --clr-accent: var(--clr-main-darker);
     --clr-accent-dark: var(--clr-main-light);
     --clr-accent-light: var(--clr-main-dark);
-    --clr-decent: var(--clr-light-darker);
+    --clr-decent: var(--clr-light-dark);
 
     --layout-fleuron: url('~assets/img/icons/floral-heart-light-red.svg');
   }
