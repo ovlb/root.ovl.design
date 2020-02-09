@@ -27,7 +27,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-user-theme="light"]) {
     --clr-fg: var(--clr-light);
     --clr-bg: var(--clr-dark);
     --clr-accent: var(--clr-main-light);

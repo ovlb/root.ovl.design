@@ -9,10 +9,10 @@
       <div>
         <switch-button
           v-if="isClient"
-          v-model="isDarkMode"
+          :value="isDarkMode"
           on-label="Dark"
           off-label="Light"
-          @click="switchThemeMode"
+          @click.native="switchThemeMode"
           >Theme</switch-button
         >
       </div>
@@ -52,13 +52,31 @@ export default {
     })
   },
   mounted() {
-    this.isDarkMode = matchMedia('(prefers-color-scheme: dark)').matches
+    const userDarkSetting = localStorage.getItem('ovlUserTheme')
+
+    if (userDarkSetting) {
+      const userSettingPrefersDark = userDarkSetting === 'dark'
+
+      this.isDarkMode = userSettingPrefersDark
+      document.documentElement.setAttribute('data-user-theme', userDarkSetting)
+    } else {
+      const isDarkMode = matchMedia('(prefers-color-scheme: dark)').matches
+
+      this.isDarkMode = isDarkMode
+    }
 
     this.isClient = true
   },
   methods: {
     switchThemeMode() {
       this.isDarkMode = !this.isDarkMode
+
+      const theme = this.isDarkMode ? 'dark' : 'light'
+
+      console.log(theme)
+
+      localStorage.setItem('ovlUserTheme', theme)
+      document.documentElement.setAttribute('data-user-theme', theme)
     }
   }
 }
@@ -77,9 +95,31 @@ export default {
     max-width: 15rem;
     margin: 0 auto;
   }
+}
+
+.t-ui-switch-button {
+  margin-top: 0.5rem;
+
+  & .t-ui-switch-button__text {
+    border: none !important;
+    font-weight: normal;
+  }
 
   & .t-ui-switch-button__text--on {
-    // color: blue;
+    background-color: var(--clr-dark) !important;
+    color: var(--clr-light) !important;
+  }
+
+  [aria-checked='true'] .t-ui-switch-button__text--on {
+    font-weight: bold;
+  }
+
+  & .t-ui-switch-button__text--off {
+    background-color: var(--clr-light) !important;
+    color: var(--clr-dark) !important;
+  }
+  [aria-checked='false'] .t-ui-switch-button__text--off {
+    font-weight: bold;
   }
 }
 
