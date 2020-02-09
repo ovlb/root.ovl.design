@@ -7,10 +7,6 @@ a {
   }
 
 
-  &:focus {
-    outline: 2px dotted var(--clr-accent);
-  }
-
   &.nuxt-link-active {
     font-weight: bold;
     text-decoration: underline;
