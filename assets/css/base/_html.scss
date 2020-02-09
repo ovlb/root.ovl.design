@@ -23,6 +23,18 @@ html {
   }
 
   @media(min-width: breakpoint(xxlarge)) {
-    font-size: 111%;
+    font-size: 114%;
+  }
+
+  @media(min-width: 1550px) {
+    font-size: 118%;
+  }
+
+  @media(min-width: 1750px) {
+    font-size: 122%;
+  }
+
+  @media(min-width: 2000px) {
+    font-size: 126%;
   }
 }

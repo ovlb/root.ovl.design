@@ -26,7 +26,7 @@
           srcSet(infos.heroImage.fields.imageLarge.fields.file.url, 'large')
         "
         media="(min-width: 1200px)"
-        sizes="(min-width: 1800px) 900px, 50vw"
+        sizes="(min-width: 1500px) 33vw, 50vw"
       />
       <img
         v-if="infos.heroImage"
@@ -163,8 +163,12 @@ $bp-text-one: 777px;
     grid-template-columns: [main-start content-start] 1fr [main-end content-end aside-start] 1fr [aside-end];
   }
 
+  @media screen and (min-width: 1500px) {
+    grid-template-columns: 1fr [main-start content-start] 44rem [main-end content-end] 1fr [aside-start] 33vw [aside-end];
+  }
+
   @supports (display: grid) {
-    max-width: 1800px;
+    max-width: unset;
 
     & > * {
       margin: 0 !important;
@@ -253,7 +257,7 @@ $bp-text-one: 777px;
 
     // font-family: var(--fonts-mono);
     background-color: #2b2b2b;
-    border-radius: 0 0.25em 0.25em 0;
+    border-radius: 0.25em;
     font-size: 85%;
     grid-column: full;
     margin-bottom: 2vmin;
