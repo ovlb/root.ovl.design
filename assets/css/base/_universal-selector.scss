@@ -15,3 +15,11 @@
 :focus {
   outline: 2px dotted var(--clr-accent);
 }
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px dotted var(--clr-accent);
+}

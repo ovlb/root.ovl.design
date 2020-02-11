@@ -31,6 +31,35 @@ $static-owlish: 'https://static.owlish.dev/fonts';
 }
 
 @font-face {
+  font-family: 'Bridge Text';
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+  src:
+    url('#{$static-owlish}/bridge/Bold-Italic.woff2') format('woff2'),
+    url('#{$static-owlish}/bridge/Bold-Italic.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'Bridge Head';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('#{$static-owlish}/bridge/Bridge-Head-Ext-Bold.woff2') format('woff2'),
+    url('#{$static-owlish}/bridge/Bridge-Head-Ext-Bold.woff') format('woff'),
+}
+@font-face {
+  font-family: 'Bridge Head';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('#{$static-owlish}/bridge/Bridge-Head-Bold.woff2') format('woff2'),
+    url('#{$static-owlish}/bridge/Bridge-Head-Bold.woff') format('woff'),
+}
+
+@font-face {
   font-family: 'LautsprecherDJR';
   font-weight: bold;
   font-style: normal;

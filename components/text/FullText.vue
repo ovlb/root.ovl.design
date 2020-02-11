@@ -233,7 +233,7 @@ $bp-text-one: 777px;
 .text__body {
   background-color: var(--clr-bg);
   display: grid;
-  grid-template-columns: [full-start] 4vmin [main-start] 1fr [main-end] 4vmin [full-end];
+  grid-template-columns: 2vmin [full-start] 4vmin [main-start] 1fr [main-end] 4vmin [full-end] 2vmin;
   grid-column: content;
   padding: space(double, viewport) 0;
   /* Used to push body over sticky image */
@@ -260,11 +260,11 @@ $bp-text-one: 777px;
     border-radius: 0.25em;
     font-size: 85%;
     grid-column: full;
-    margin-bottom: 2vmin;
+    // margin: 2vmin 4vmin;
     margin-top: 2vmin;
     overflow: auto;
     line-height: 1.7;
-    padding: 4vmin;
+    padding: 2vmin 4vmin;
     width: 100%;
   }
 
