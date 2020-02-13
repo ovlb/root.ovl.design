@@ -96,6 +96,7 @@ export default {
 
 .article-card__headline {
   display: inline-block;
+  font-family: $fonts-headline;
   font-size: var(--type-medium);
 
   margin-top: 0;
