@@ -1,5 +1,5 @@
 <template>
-  <header class="main-header" aria-label="Hauptmenü">
+  <header class="main-header">
     <section class="skip-links">
       <a class="skip-link" href="#main-content"> Jump to main content </a>
     </section>

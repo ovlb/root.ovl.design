@@ -2,10 +2,9 @@
   <nav id="site-nav" class="main-nav" aria-label="Main">
     <nuxt-link
       :exact="true"
+      aria-label="Homepage"
       class="u-is-visually-hidden"
       to="/"
-      title="Zur Startseite"
-      tabindex="-1"
     />
     <dynamic-anchor
       v-for="{ id, to, text, useNativeLinkElement } in links"
