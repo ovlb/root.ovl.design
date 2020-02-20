@@ -39,3 +39,14 @@
     --layout-fleuron: url('~assets/img/icons/floral-heart-light-red.svg');
   }
 }
+
+:root[data-user-theme="dark"] {
+  --clr-fg: var(--clr-light);
+    --clr-bg: var(--clr-dark-lighter);
+    --clr-accent: var(--clr-main-darker);
+    --clr-accent-dark: var(--clr-main-light);
+    --clr-accent-light: var(--clr-main-dark);
+    --clr-decent: var(--clr-light-dark);
+
+    --layout-fleuron: url('~assets/img/icons/floral-heart-light-red.svg');
+}
