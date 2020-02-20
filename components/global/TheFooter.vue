@@ -73,9 +73,8 @@ export default {
 
       const theme = this.isDarkMode ? 'dark' : 'light'
 
-      console.log(theme)
-
       localStorage.setItem('ovlUserTheme', theme)
+
       document.documentElement.setAttribute('data-user-theme', theme)
     }
   }

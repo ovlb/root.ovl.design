@@ -83,7 +83,8 @@ export default {
   padding-left: space(full, viewport);
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     & .article-card__headline {
       transform: translateX(-(space(half, viewport)));
 

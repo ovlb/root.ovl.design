@@ -1,5 +1,5 @@
 <template>
-  <the-content class="content--narrow">
+  <the-content class="">
     <header class="archive-header u-floral-heart-gradient">
       <h1 class="main-headline">Scribbles on digital paper</h1>
     </header>
