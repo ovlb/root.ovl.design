@@ -26,9 +26,13 @@ export default {
 
 <style lang="scss">
 .article-list {
-  display: grid;
-  grid-gap: space(triple, viewport);
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
+
+  & > * + * {
+    margin-top: 4vmin;
+  }
 }
 </style>
