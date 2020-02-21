@@ -136,7 +136,7 @@ export default {
       let set = ''
 
       sizes[size].forEach((size) => {
-        set += `${url}?w=${size} ${size}w, `
+        set += `${url}?w=${size}&q=55 ${size}w, `
       })
 
       return set
