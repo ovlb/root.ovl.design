@@ -31,8 +31,8 @@
   :root:not([data-user-theme="light"]) {
     --clr-fg: var(--clr-light);
     --clr-bg: var(--clr-dark-lighter);
-    --clr-accent: var(--clr-main-darker);
-    --clr-accent-dark: var(--clr-main-light);
+    --clr-accent: var(--clr-main-light);
+    --clr-accent-dark: var(--clr-main-darker);
     --clr-accent-light: var(--clr-main-dark);
     --clr-decent: var(--clr-light-dark);
 
@@ -43,8 +43,8 @@
 :root[data-user-theme="dark"] {
   --clr-fg: var(--clr-light);
     --clr-bg: var(--clr-dark-lighter);
-    --clr-accent: var(--clr-main-darker);
-    --clr-accent-dark: var(--clr-main-light);
+    --clr-accent: var(--clr-main-light);
+    --clr-accent-dark: var(--clr-main-darker);
     --clr-accent-light: var(--clr-main-dark);
     --clr-decent: var(--clr-light-dark);
 
