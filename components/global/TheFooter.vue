@@ -17,6 +17,22 @@
         >
       </div>
     </section>
+    <nav class="o-social-logos" aria-label="External profiles">
+      <a
+        href="https://twitter.com/_ovlb"
+        aria-label="Oscar’s Twitter profile"
+        class="c-social-logos__logo"
+      >
+        <img src="~assets/img/twitter-red.png" alt="Twitter logo" />
+      </a>
+      <a
+        href="https://github.com/ovlb"
+        aria-label="Oscar’s GitHub profile"
+        class="c-social-logos__logo"
+      >
+        <img src="~assets/img/github-red.png" alt="GitHub logo" />
+      </a>
+    </nav>
     <nav class="footer-nav">
       <nuxt-link
         v-for="item in navItems"
@@ -85,14 +101,30 @@ export default {
 .site-footer {
   font-size: var(--type-small);
   margin-bottom: space(full, viewport);
-  margin-top: space(double, viewport);
+  margin-top: space(triple, viewport);
   display: flex;
   flex-flow: row wrap;
-  padding: 2vmin;
+  padding: space(double, viewport) 2vmin;
 
   & > * {
     max-width: 15rem;
     margin: 0 auto;
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 15rem);
+    align-items: start;
+    grid-gap: 1rem;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    & > * {
+      width: 100% !important;
+      max-width: unset;
+      margin: initial;
+    }
   }
 }
 
@@ -132,6 +164,22 @@ export default {
 
   & + & {
     margin-top: space(half, relative);
+  }
+}
+
+.o-social-logos {
+  display: flex;
+}
+
+.c-social-logos__logo {
+  display: inline-block;
+
+  & + & {
+    margin-left: 1.5rem;
+  }
+
+  & > img {
+    height: 30px;
   }
 }
 
