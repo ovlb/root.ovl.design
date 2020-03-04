@@ -105,6 +105,7 @@ export default {
   display: flex;
   flex-flow: row wrap;
   padding: space(double, viewport) 2vmin;
+  width: 100%;
 
   & > * {
     max-width: 15rem;
