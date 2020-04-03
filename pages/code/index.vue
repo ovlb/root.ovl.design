@@ -53,6 +53,12 @@ export default {
           property: 'og:image',
           content:
             'https://images.ctfassets.net/0qq78o7muy2j/3NP42JzNjWo0qKMk62kmqk/edf552a83b8cbe3c1e1375f37a1712dc/ovl-og-image-code.png'
+        },
+        {
+          hid: 'twitterImage',
+          name: 'twitter:image',
+          content:
+            'https://images.ctfassets.net/0qq78o7muy2j/3NP42JzNjWo0qKMk62kmqk/edf552a83b8cbe3c1e1375f37a1712dc/ovl-og-image-code.png'
         }
       ]
     }

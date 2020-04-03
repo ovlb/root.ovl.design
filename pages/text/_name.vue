@@ -73,7 +73,7 @@ export default {
         },
         {
           hid: 'twitterImage',
-          property: 'twitter:image',
+          name: 'twitter:image',
           content: og.url
         },
         {
@@ -88,7 +88,7 @@ export default {
         },
         {
           hid: 'twitterImgAlt',
-          property: 'twitter:image:alt',
+          name: 'twitter:image:alt',
           content: altText
         }
       )
