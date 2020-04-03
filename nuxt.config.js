@@ -60,12 +60,12 @@ export default {
       {
         hid: 'twitterSite',
         name: 'twitter:site',
-        content: '_ovlb'
+        content: '@_ovlb'
       },
       {
         hid: 'twitterCreator',
         name: 'twitter:creator',
-        content: '_ovlb'
+        content: '@_ovlb'
       },
       {
         hid: 'twitterImgAlt',
