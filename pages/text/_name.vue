@@ -72,6 +72,11 @@ export default {
           content: og.url
         },
         {
+          hid: 'twitterImage',
+          property: 'twitter:image',
+          content: og.url
+        },
+        {
           hid: 'ogImageWidth',
           property: 'og:image:width',
           content: og.details.image.width
